@@ -20,12 +20,37 @@
     font-family: 'Work Sans Light Italic';
     src: url('./assets/fonts/WorkSans-LightItalic.woff2');
 }
-
+@font-face {
+    font-family: 'Work Sans Bold';
+    src: url('./assets/fonts/WorkSans-Bold.woff2');
+}
 
 .main__container {
     font-size: var(--default-font-size);
     font-weight: 400;
-    
+    box-sizing: border-box;
+}
+
+.header__container-main {
+        background-image: url(/assets/img/home.jpeg);
+        width: auto;
+        background-size: cover;
+        background-position-x: center;
+        height: 20rem;
+        padding: 1rem;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__text {
+    font-size: 1.8rem;
+    text-align: right;
+    line-height: 3rem;
+    padding: 2rem 0;
 }
 
 .footer__container-main {
@@ -93,9 +118,19 @@
     font-family: 'Abril Fatface';
 }
 
+.text-header-italic {    
+    font-family: 'Work Sans Light Italic';
+}
+
+.text-header-bold-work {    
+    font-family: 'Work Sans Bold';
+}
+.text-header-bold-abril {    
+    font-family: 'Abril Fatface';
+}
+
 .text-title-main {
-    font-size: 6rem;
-    
+    font-size: 2.5rem;    
 }
 
 .text-title-h1 {
