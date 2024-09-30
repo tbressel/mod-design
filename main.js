@@ -30,7 +30,8 @@ const components = {
     header: ["header-template", "header-target"],
     footer: ["footer-template", "footer-target"],
     main:  ["main-template", "main-target"],
-    article: ["article-template","main__articles"]
+    article: ["article-template","main__articles"],
+    navigation: ["navigation-template", "navigation-target"]
     };
 
 
@@ -44,6 +45,13 @@ createComponent(component);
  * Function to create the header and footer components
  */
 component = components.header;
+createComponent(component);
+
+
+/**
+ * Function to create the navigation components
+ */
+component = components.navigation;
 createComponent(component);
 
 
@@ -62,3 +70,5 @@ createArticle(component)
 createArticle(component)
 createArticle(component)
 createArticle(component)
+
+

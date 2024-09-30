@@ -9,6 +9,7 @@
 
 <body class="body">
   <div id="app">
+    <div id="navigation-target"></div>
     <div id="header-target"></div>
     <div id="main-target"></div>
     <div id="footer-target"></div>
@@ -18,16 +19,27 @@
 
 </html>
 
-
+<!-- NAVIGATION -->
+<template id="navigation-template">
+  <div class="header__top">
+    <p class="text-title-secondary black text-title-main">Mob<span class="air-force-blue">D</span><span>esign</p>
+    <div class="header__navigation">
+      <svg width="32" height="26" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect y="0.5" width="32" height="3" fill="black" />
+        <rect y="11.5" width="32" height="3" fill="black" />
+        <rect y="22.5" width="32" height="3" fill="black" />
+      </svg>
+    </div>
+  </div>
+</template>
 
 <!-- HEADER -->
 <template id="header-template">
   <header>
 
-    <div class="overlay__main">
+    <div class="overlay__main hidden">
       <div class="overlay__top">
-        <p class="text-title-secondary color-black text-title-main">Mob<span
-            class="color-air-force-blue">D</span><span>esign</p>
+        <p class="text-title-secondary black text-title-main">Mob<span class="air-force-blue">D</span><span>esign</p>
         <div class="overlay__navigation">
           <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="2.25121" y="0.564941" width="35" height="3" transform="rotate(45 2.25121 0.564941)" fill="black" />
@@ -37,46 +49,21 @@
         </div>
       </div>
 
- 
-        <ul class="overlay__links text-link">
-          <li>
-            <a href="#">Accueil</a>
-          </li>
-          <li>
-            <a href="#">Canapés</a>
-          </li>
-          <li>
-            <a href="#">Décoration</a>
-          </li>
-          <li>
-            <a href="#">Mes coups de coeur</a>
-          </li>
-        </ul>
-    
 
-    </div>
-
-
-    <div class="header__main">
-      <div class="header__top">
-        <p class="text-title-secondary color-black text-title-main">Mob<span
-            class="color-air-force-blue">D</span><span>esign</p>
-        <div class="header__navigation">
-          <svg width="32" height="26" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect y="0.5" width="32" height="3" fill="black" />
-            <rect y="11.5" width="32" height="3" fill="black" />
-            <rect y="22.5" width="32" height="3" fill="black" />
-          </svg>
-        </div>
-      </div>
-
-      <div class="header__bot">
-        <p class="header__text text-header-italic">
-          Votre <span class="text-header-regular color-sinoipa text-header-bold-work">intérieur </span><br>réinventé
-          avec <span class="text-header-regular color-air-force-blue text-header-bold-abril">style</span>
-        </p>
-      </div>
-
+      <ul class="overlay__links text-link">
+        <li>
+          <a href="#">Accueil</a>
+        </li>
+        <li>
+          <a href="#">Canapés</a>
+        </li>
+        <li>
+          <a href="#">Décoration</a>
+        </li>
+        <li>
+          <a href="#">Mes coups de coeur</a>
+        </li>
+      </ul>
     </div>
   </header>
 </template>
@@ -84,6 +71,13 @@
 <!-- MAIN  -->
 <template id="main-template">
   <main>
+    <section class="main__header">
+      <p class="header__text text-header-italic">
+        Votre <span class="text-header-regular sinoipa text-header-bold-work">intérieur </span><br>réinventé
+        avec <span class="text-header-regular air-force-blue text-header-bold-abril">style</span>
+      </p>
+    </section>
+
     <section class="main__title">
       <h1 class="text-title-h1">Nos dernières nouveauté</h1>
     </section>
@@ -105,7 +99,7 @@
 <template id="footer-template">
   <footer class="footer__container-main bg-air-force-blue">
 
-    <ul class="footer__links color-white text-link">
+    <ul class="footer__links white text-link">
       <li>
         <a href="#">Qui sommes-nous ?</a>
       </li>
@@ -119,7 +113,7 @@
 
     <div class="footer__bot">
 
-      <p class="text-title-secondary color-black ">Mob<span class="color-white">D</span><span>esign</p>
+      <p class="text-title-secondary black ">Mob<span class="white">D</span><span>esign</p>
 
       <div class="footer__network">
         <a href="#">
