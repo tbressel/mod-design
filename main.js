@@ -1,24 +1,41 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import "the-new-css-reset/css/reset.css";
+import './style.css';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+/**
+ * Function to get a template and inject it into the DOM
+ * 
+ * @param {*} component 
+ */
+function createComponent(component) {
+    const template = document.getElementById(component[0]).content.cloneNode(true);
+    const goalElement = document.getElementById(component[1]);
+    goalElement.appendChild(template);
+    }
 
-setupCounter(document.querySelector('#counter'))
+/**
+ * Object with the components to be injected into the DOM
+ */
+const components = {
+    header: ["header-template", "header-target"],
+    footer: ["footer-template", "footer-target"],
+    main:  ["main-template", "main-target"],
+    };
+
+
+/**
+ * Function to create the main component
+ */
+let component = components.main;
+createComponent(component);
+
+/**
+ * Function to create the header and footer components
+ */
+component = components.header;
+createComponent(component);
+
+/**
+ * Function to create the footer component
+ */
+component = components.footer;
+createComponent(component);
