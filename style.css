@@ -25,13 +25,13 @@
     src: url('./assets/fonts/WorkSans-Bold.woff2');
 }
 
-.main__container {
+.body {
     font-size: var(--default-font-size);
     font-weight: 400;
     box-sizing: border-box;
 }
 
-.header__container-main {
+.header__main {
         background-image: url(/assets/img/home.jpeg);
         width: auto;
         background-size: cover;
@@ -99,6 +99,8 @@
     background-color: var(--air-force-blue);
 }
 
+
+
 /* Text colors */
 .color-white {
     color: var(--white);
@@ -115,6 +117,9 @@
 .color-charcoal {
     color: var(--charcoal);
 }
+
+
+
 
 
 /* Text sizes */

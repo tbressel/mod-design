@@ -19,7 +19,9 @@ function createComponent(component) {
  */
 function createArticle(component) {
     const template = document.getElementById(component[0]).content.cloneNode(true);
-    const goalElement = document.getElementsByClassName(component[1]);
+    console.log("variable template : ",template);
+    const goalElement = document.querySelector('.' + component[1]);
+    console.log("mon élement : ",goalElement)
     goalElement.appendChild(template);
     }
 
@@ -30,7 +32,7 @@ const components = {
     header: ["header-template", "header-target"],
     footer: ["footer-template", "footer-target"],
     main:  ["main-template", "main-target"],
-    article: ["article-template","article-target"]
+    article: ["article-template","main__articles"]
     };
 
 
@@ -40,17 +42,20 @@ const components = {
 let component = components.main;
 createComponent(component);
 
+
 /**
  * Function to create the header and footer components
  */
 component = components.header;
 createComponent(component);
 
+
 /**
  * Function to create the footer component
  */
 component = components.footer;
 createComponent(component);
+
 
 component = components.article;
 createArticle(component)

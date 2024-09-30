@@ -5,14 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
-  <link rel="stylesheet" href="/assets/icons/reset-css/reset.css" />
 </head>
 
-<body class="main__container">
+<body class="body">
   <div id="app">
-    <div id="header-target" class="header__container"></div>
-    <div id="main-target" class="main__container"></div>
-    <div id="footer-target" class="footer__container"></div>
+    <div id="header-target"></div>
+    <div id="main-target"></div>
+    <div id="footer-target"></div>
   </div>
   <script type="module" src="/main.js"></script>
 </body>
@@ -24,10 +23,8 @@
 <!-- HEADER -->
 <template id="header-template">
   <header>
-    <div class="header__container-main">
-
+    <div class="header__main">
       <div class="header__top">
-
         <p class="text-title-secondary color-black text-title-main">Mob<span
             class="color-air-force-blue">D</span><span>esign</p>
         <div class="header__navigation">
@@ -36,7 +33,6 @@
             <rect y="11.5" width="32" height="3" fill="black" />
             <rect y="22.5" width="32" height="3" fill="black" />
           </svg>
-
         </div>
       </div>
 
@@ -59,7 +55,6 @@
     </section>
 
     <section class="main__articles">
-
     </section>
 
   </main>
@@ -137,9 +132,3 @@
   </footer>
 </template>
 
-
-<template id="article-template">
-  <div>
-    <p>ARTICLE</p>
-  </div>
-</template>
