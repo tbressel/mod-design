@@ -13,12 +13,24 @@ function createComponent(component) {
     }
 
 /**
+ * Function to get a template and inject it into the DOM
+ * 
+ * @param {*} component 
+ */
+function createArticle(component) {
+    const template = document.getElementById(component[0]).content.cloneNode(true);
+    const goalElement = document.getElementsByClassName(component[1]);
+    goalElement.appendChild(template);
+    }
+
+/**
  * Object with the components to be injected into the DOM
  */
 const components = {
     header: ["header-template", "header-target"],
     footer: ["footer-template", "footer-target"],
     main:  ["main-template", "main-target"],
+    article: ["article-template","article-target"]
     };
 
 
@@ -39,3 +51,6 @@ createComponent(component);
  */
 component = components.footer;
 createComponent(component);
+
+component = components.article;
+createArticle(component)

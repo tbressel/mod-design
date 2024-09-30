@@ -57,7 +57,7 @@
     display: flex;
     white-space: nowrap;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2.5rem;
     justify-content: space-evenly;
     padding: 2rem 1rem;
 }
@@ -76,7 +76,15 @@
     gap: 2rem;
     display: flex;
 }
-
+.footer__links {
+    font-size: 1.25rem;
+    font-family: 'Work Sans';
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.5rem;
+}
 /* Background colors */
 .bg-charcoal {
     background-color: var(--charcoal);
@@ -134,7 +142,12 @@
 }
 
 .text-title-h1 {
+    font-family: 'Abril Fatface';
     font-size: 2.5rem;
+    background-color: var(--air-force-blue);
+    text-align: center;
+    color: var(--white);
+    padding: 1rem;
 }
 
 .text-title-h2 {
