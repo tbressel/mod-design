@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
@@ -23,36 +23,25 @@
 <template id="navigation-template">
   <div class="header__top">
     <p class="text-title-secondary black text-title-main">Mob<span class="air-force-blue">D</span><span>esign</p>
-    <div class="header__navigation">
-      <svg width="32" height="26" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect y="0.5" width="32" height="3" fill="black" />
-        <rect y="11.5" width="32" height="3" fill="black" />
-        <rect y="22.5" width="32" height="3" fill="black" />
-      </svg>
-    </div>
+    <button id="burger" type="button" class="header__navigation burger-button" aria-label="Ouvrir la navigation">
+    </button>
   </div>
 </template>
 
-<!-- HEADER -->
+<!-- OVERLAY -->
 <template id="header-template">
   <header>
-
     <div class="overlay__main hidden">
       <div class="overlay__top">
         <p class="text-title-secondary black text-title-main">Mob<span class="air-force-blue">D</span><span>esign</p>
-        <div class="overlay__navigation">
-          <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2.25121" y="0.564941" width="35" height="3" transform="rotate(45 2.25121 0.564941)" fill="black" />
-            <rect x="0.129883" y="25.3135" width="35" height="3" transform="rotate(-45 0.129883 25.3135)"
-              fill="black" />
-          </svg>
-        </div>
+          <button id="cross" type="button" class="overlay__navigation cross-button" aria-label="Fermer la navigation">
+          </button>
       </div>
 
 
       <ul class="overlay__links text-link">
         <li>
-          <a href="#">Accueil</a>
+          <a class="active" href="#">Accueil</a>
         </li>
         <li>
           <a href="#">Canapés</a>
@@ -68,7 +57,7 @@
   </header>
 </template>
 
-<!-- MAIN  -->
+<!-- MAIN HOME  -->
 <template id="main-template">
   <main>
     <section class="main__header">
@@ -78,7 +67,8 @@
       </p>
     </section>
 
-    <section class="main__title">
+
+    <section class="banner">
       <h1 class="text-title-h1">Nos dernières nouveauté</h1>
     </section>
 
@@ -101,7 +91,7 @@
 
     <ul class="footer__links white text-link">
       <li>
-        <a href="#">Qui sommes-nous ?</a>
+        <a id="footer-link-1" href="#" >Qui sommes-nous ?</a>
       </li>
       <li>
         <a href="#">Mentions légales</a>

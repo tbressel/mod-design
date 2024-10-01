@@ -1,0 +1,77 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --black-alpha: #0000000f;
+    --air-force-blue: #547D87;
+    --charcoal: #2b4045;
+    --sinopia: #D0451b;
+    --white-smoke: #f5f5f6;
+    --font-size: 16px;
+}   
+
+@import "./components/footer/footer";
+@import "./components/article/article";
+@import "./components/header/header";
+@import "./components/overlay/overlay";
+@import "./style/text";
+@import "./style/colors";
+
+
+@font-face {
+    font-family: 'Abril Fatface';
+    src: url('./assets/fonts/AbrilFatface-Regular.woff2');
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url('./assets/fonts/WorkSans-Regular.woff2');
+}
+@font-face {
+    font-family: 'Work Sans Light Italic';
+    src: url('./assets/fonts/WorkSans-LightItalic.woff2');
+}
+@font-face {
+    font-family: 'Work Sans Bold';
+    src: url('./assets/fonts/WorkSans-Bold.woff2');
+}
+
+
+.body {
+    font-size: var(--font-size);
+    font-weight: 400;
+    box-sizing: border-box;
+    min-width: 320px;
+}
+
+.btn {
+    background-color: var(--air-force-blue);
+    color: var(--white);
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    border-bottom: var(--sinopia) 2px solid;
+}
+.burger-button::after {
+    content: url('./assets/img/burger.svg');
+}
+.cross-button::after {
+    content: url('./assets/img/cross.svg');
+}
+
+.blank-space {
+    height: 5rem;
+}
+
+
+.banner-article {
+    font-family: 'Work Sans';
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

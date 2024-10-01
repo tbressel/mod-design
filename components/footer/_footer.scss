@@ -1,0 +1,33 @@
+/* Footer */
+.footer__container-main {
+    display: flex;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: space-evenly;
+    padding: 2rem 1rem;
+}
+
+.footer__bot {
+    display: flex;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer__network {
+    gap: 2rem;
+    display: flex;
+}
+.footer__links {
+    font-size: 1.25rem;
+    font-family: 'Work Sans';
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.5rem;
+}

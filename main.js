@@ -1,50 +1,22 @@
 import "the-new-css-reset/css/reset.css";
-import './style.css';
-
-/**
- * Function to get a template and inject it into the DOM
- * 
- * @param {*} component 
- */
-function createComponent(component) {
-    const template = document.getElementById(component[0]).content.cloneNode(true);
-    const goalElement = document.getElementById(component[1]);
-    goalElement.appendChild(template);
-    }
-
-/**
- * Function to get a template and inject it into the DOM
- * 
- * @param {*} component 
- */
-function createArticle(component) {
-    const template = document.getElementById(component[0]).content.cloneNode(true);
-    const goalElement = document.querySelector('.' + component[1]);
-    goalElement.appendChild(template);
-    }
-
-/**
- * Object with the components to be injected into the DOM
- */
-const components = {
-    header: ["header-template", "header-target"],
-    footer: ["footer-template", "footer-target"],
-    main:  ["main-template", "main-target"],
-    article: ["article-template","main__articles"],
-    navigation: ["navigation-template", "navigation-target"]
-    };
-
+import "./style.scss";
+import { createComponent, createArticle, components } from "./components.js";
 
 /**
  * Function to create the main component
  */
 let component = components.main;
 createComponent(component);
-
 /**
  * Function to create the header and footer components
  */
 component = components.header;
+createComponent(component);
+
+/**
+ * Function to create the footer component
+ */
+component = components.footer;
 createComponent(component);
 
 
@@ -54,21 +26,49 @@ createComponent(component);
 component = components.navigation;
 createComponent(component);
 
-
-/**
- * Function to create the footer component
- */
-component = components.footer;
-createComponent(component);
-
 /**
  * Function to create the article component
  */
 component = components.article;
-createArticle(component)
-createArticle(component)
-createArticle(component)
-createArticle(component)
-createArticle(component)
+createArticle(component);
+createArticle(component);
+createArticle(component);
+createArticle(component);
+createArticle(component);
 
+document.addEventListener("DOMContentLoaded", () => {
+  const burgerElement = document.getElementById("burger");
+  const crossElement = document.getElementById("cross");
+  const overlayElement = document.querySelector(".overlay__main");
 
+  const footerLink1 = document.getElementById('footer-link-1');
+
+  document.addEventListener("click", function (event) {
+    if (event.target && event.target === burgerElement) {
+      overlayElement.classList.remove("hidden");
+    } else if (event.target && event.target === crossElement) {
+      overlayElement.classList.add("hidden");
+    }
+
+    if (event.target && event.target === footerLink1 ) {
+        console.log('lien n°1')
+        document.getElementById('main-target').innerHTML="";
+        let component = components.text;
+        createComponent(component);
+    }
+    if (event.target && event.target === footerLink2 ) {
+        console.log('lien n°2')
+        document.getElementById('main-target').innerHTML="";
+        let component = components.text;
+        createComponent(component);
+    }
+    if (event.target && event.target === footerLink3 ) {
+        console.log('lien n°3')
+        document.getElementById('main-target').innerHTML="";
+        let component = components.text;
+        createComponent(component);
+    }
+
+  });
+
+});

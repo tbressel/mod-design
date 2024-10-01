@@ -1,0 +1,28 @@
+
+/* Header */
+.main__header {
+    background-image: url(/assets/img/home.jpeg);
+    width: auto;
+    background-size: cover;
+    background-position-x: center;
+    height: 20rem;
+    padding: 5rem 1rem;
+}
+
+.header__top {
+    position: fixed;
+    width: 100%;
+    z-index: 500;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header__text {
+    font-size: 1.8rem;
+    text-align: right;
+    line-height: 3rem;
+    padding: 2rem 0;
+}

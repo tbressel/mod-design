@@ -1,0 +1,70 @@
+
+
+/* Text sizes */
+.text-default {
+    font-size: 1rem;
+}
+.text-title-secondary {
+    font-size: 2rem;
+    font-family: 'Abril Fatface';
+}
+
+.text-header-italic {    
+    font-family: 'Work Sans Light Italic';
+}
+
+.text-header-bold-work {    
+    font-family: 'Work Sans Bold';
+}
+.text-header-bold-abril {    
+    font-family: 'Abril Fatface';
+}
+.text-button-abril {    
+    font-size: 1.5rem;
+    font-family: 'Abril Fatface';
+}
+
+.text-title-main {
+    font-size: 2.5rem;    
+}
+
+.text-title-h1 {
+    font-family: 'Abril Fatface';
+    font-size: 2.5rem;
+    background-color: var(--air-force-blue);
+    text-align: center;
+    color: var(--white);
+    padding: 1rem;
+}
+
+.text-title-h2 {
+    font-size: 2rem;
+}
+
+.text-title-h3 {
+    font-size: 1.5rem;
+}
+
+.text-link {
+    font-size: 1.25rem;
+    font-family: 'Work Sans';
+}
+
+.active {
+    font-size: 1.25rem;
+}
+
+
+/* Text styles */
+.italic {
+    font-style: italic;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
