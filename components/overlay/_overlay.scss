@@ -23,4 +23,20 @@
 }
 
 
-
+@media screen and (min-width: 980px) {
+    .overlay__top {
+        display: none;
+    }
+    .overlay__main {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        flex-direction: row;
+    }
+    .overlay__links {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+    }
+}
