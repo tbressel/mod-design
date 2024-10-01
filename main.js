@@ -1,5 +1,3 @@
-
-
 import "the-new-css-reset/css/reset.css";
 import "./style.scss";
 import {
@@ -8,7 +6,7 @@ import {
   components,
   toggleOverlay,
 } from "./components.js";
-import { getArticles } from "./data.js";
+import { getArticles, getRecentProducts } from "./data.js";
 
 /**
  * Function to create the main component
@@ -36,18 +34,16 @@ createComponent(component);
 document.addEventListener("DOMContentLoaded", () => {
   getArticles();
 
- 
+  const jsonData = JSON.parse(localStorage.getItem("jsonData"));
+  console.log("jsonDat", jsonData);
 
+  const fourLastRecentProducts = getRecentProducts(jsonData);
+  console.log("Les 4 objets les plus récents :", fourLastRecentProducts);
 
-
-  /**
-   * Function to create the article component
-   */
-  component = components.article;
-  createArticle(component);
-  createArticle(component);
-  createArticle(component);
-  createArticle(component);
+for (let i = 0; i < 4; i++) {
+    const article = components.article;
+    createArticle(article, fourLastRecentProducts[i]);
+  }
 
   const burgerElement = document.getElementById("burger");
   const crossElement = document.getElementById("cross");
