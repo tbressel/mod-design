@@ -45,8 +45,12 @@ export const components = {
 export function toggleOverlay(overlayElement) {
   if (window.innerWidth > 980 && overlayElement.classList.contains("hidden")) {
     overlayElement.classList.remove("hidden");
+    console.log("overlayElement.classList", overlayElement.classList);
+    console.log ("window.innerWidth", window.innerWidth);
   }
   if (window.innerWidth < 980 && !overlayElement.classList.contains("hidden")) {
     overlayElement.classList.add("hidden");
+    console.log("overlayElement.classList", overlayElement.classList);
+    console.log ("window.innerWidth", window.innerWidth);
   }
 }

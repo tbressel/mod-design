@@ -6,6 +6,7 @@ import {
   components,
   toggleOverlay,
 } from "./components.js";
+import { getArticles } from "./data.js";
 
 /**
  * Function to create the main component
@@ -30,16 +31,22 @@ createComponent(component);
 component = components.navigation;
 createComponent(component);
 
-/**
- * Function to create the article component
- */
-component = components.article;
-createArticle(component);
-createArticle(component);
-createArticle(component);
-createArticle(component);
 
 document.addEventListener("DOMContentLoaded", () => {
+  
+  getArticles();
+  
+  /**
+   * Function to create the article component
+   */
+  component = components.article;
+  createArticle(component);
+  createArticle(component);
+  createArticle(component);
+  createArticle(component);
+
+
+
   const burgerElement = document.getElementById("burger");
   const crossElement = document.getElementById("cross");
   const overlayElement = document.querySelector(".overlay__main");
