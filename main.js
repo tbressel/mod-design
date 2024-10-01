@@ -34,7 +34,7 @@ createArticle(component);
 createArticle(component);
 createArticle(component);
 createArticle(component);
-createArticle(component);
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const burgerElement = document.getElementById("burger");
