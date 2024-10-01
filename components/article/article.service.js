@@ -17,6 +17,8 @@ export async function getArticles() {
     });
 }
 
+
+
 /**
  *
  * Function to generate a MD5 hash from a JSON object
@@ -28,6 +30,8 @@ function generateMD5(jsonData) {
   const hash = CryptoJS.MD5(JSON.stringify(jsonData));
   return hash.toString(CryptoJS.enc.Hex);
 }
+
+
 
 /**
  *
@@ -42,11 +46,14 @@ function isDataChanged(jsonData) {
   if (newHash !== storedHash) {
     localStorage.setItem("jsonDataHash", newHash);
     localStorage.setItem("jsonData", JSON.stringify(jsonData));
-    console.log("updated datas");
+    console.warn("updated datas");
   } else {
     console.log("no update needed");
   }
 }
+
+
+
 
 /**
  *
@@ -60,3 +67,5 @@ export function getRecentProducts(data) {
     .sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded))
     .slice(0, 4);
 }
+
+
