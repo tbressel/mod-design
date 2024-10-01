@@ -17,6 +17,8 @@ export async function getArticles() {
     });
 }
 
+
+
 /**
  *
  * Function to generate a MD5 hash from a JSON object
@@ -28,6 +30,8 @@ function generateMD5(jsonData) {
   const hash = CryptoJS.MD5(JSON.stringify(jsonData));
   return hash.toString(CryptoJS.enc.Hex);
 }
+
+
 
 /**
  *
@@ -48,6 +52,9 @@ function isDataChanged(jsonData) {
   }
 }
 
+
+
+
 /**
  *
  * Function to get the 4 most recent objects
@@ -60,3 +67,5 @@ export function getRecentProducts(data) {
     .sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded))
     .slice(0, 4);
 }
+
+
