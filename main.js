@@ -69,6 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
         createComponent(component);
     }
 
+
+
   });
 
 });
