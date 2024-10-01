@@ -1,3 +1,5 @@
+
+
 import "the-new-css-reset/css/reset.css";
 import "./style.scss";
 import {
@@ -33,6 +35,10 @@ createComponent(component);
 
 document.addEventListener("DOMContentLoaded", () => {
   getArticles();
+
+ 
+
+
 
   /**
    * Function to create the article component
