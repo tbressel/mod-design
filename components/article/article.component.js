@@ -4,8 +4,6 @@
  * @param {*} component
  */
 export function createArticle(component, product) {
-  console.log("product", product);
-  console.log("component", component);
   const template = document.getElementById(component[0]).content.cloneNode(true);
   const goalElement = document.querySelector("." + component[1]);
   template.querySelector(".article__container").setAttribute("id", product.id);

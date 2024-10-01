@@ -46,7 +46,7 @@ function isDataChanged(jsonData) {
   if (newHash !== storedHash) {
     localStorage.setItem("jsonDataHash", newHash);
     localStorage.setItem("jsonData", JSON.stringify(jsonData));
-    console.log("updated datas");
+    console.warn("updated datas");
   } else {
     console.log("no update needed");
   }
