@@ -31,11 +31,9 @@ createComponent(component);
 component = components.navigation;
 createComponent(component);
 
-
 document.addEventListener("DOMContentLoaded", () => {
-  
   getArticles();
-  
+
   /**
    * Function to create the article component
    */
@@ -44,8 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
   createArticle(component);
   createArticle(component);
   createArticle(component);
-
-
 
   const burgerElement = document.getElementById("burger");
   const crossElement = document.getElementById("cross");
@@ -59,6 +55,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("resize", () => {
     toggleOverlay(overlayElement);
+  });
+
+  window.addEventListener("scroll", () => {
+    const elementTextSize =
+      document.querySelector(".header__text").offsetHeight;
+    const elementImageSize =
+      document.querySelector(".main__header").offsetHeight;
+    if (window.scrollY > (elementImageSize - elementTextSize) / 2) {
+      document.querySelector(".header__top").classList.add("bg-header");
+    }
+    if (window.scrollY === 0) {
+      document.querySelector(".header__top").classList.remove("bg-header");
+    }
   });
 
   document.addEventListener("click", function (event) {
