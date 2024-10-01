@@ -9,12 +9,13 @@
 
 <body class="body">
   <div id="app">
-    <div id="navigation-target"></div>
+    <div id="navigation-target" class="navigation"></div>
     <div id="header-target"></div>
     <div id="main-target"></div>
     <div id="footer-target"></div>
   </div>
   <script type="module" src="/main.js"></script>
+  <script src="/data.js"></script>
 </body>
 
 </html>
@@ -61,10 +62,14 @@
 <template id="main-template">
   <main>
     <section class="main__header">
-      <p class="header__text text-header-italic">
-        Votre <span class="text-header-regular sinoipa text-header-bold-work">intérieur </span><br>réinventé
-        avec <span class="text-header-regular air-force-blue text-header-bold-abril">style</span>
-      </p>
+      
+      <div class="main__text">
+        <p class="header__text text-header-italic">
+          Votre <span class="text-header-regular sinoipa text-header-bold-work">intérieur </span><br>réinventé
+          avec <span class="text-header-regular air-force-blue text-header-bold-abril">style</span>
+        </p>
+      </div>
+
     </section>
 
 
@@ -132,10 +137,10 @@
         <a id="footer-link-1" href="#">Qui sommes-nous ?</a>
       </li>
       <li>
-        <a href="#">Mentions légales</a>
+        <a  id="footer-link-2" href="#">Mentions légales</a>
       </li>
       <li>
-        <a href="#">CGV</a>
+        <a  id="footer-link-3" href="#">CGV</a>
       </li>
     </ul>
 
@@ -190,23 +195,24 @@
 
 <!-- ARTICLE CARD -->
 <template id="article-template">
-  <div class="article__container">
+  <div id="0" class="article__container">
     <div class="article__image">
-      <img src="./assets/img/sofa-nordique-1.jpg" alt="sofa-nordique-1">
+      <img src="" alt="">
     </div>
 
     <div class="article__top-text">
       <div class="article__left-text">
-        <h2 class="article__title-h2">Sofa Nordique</h2>
-        <p class="article__category">Canapés et fauteuils</p>
+        <h2 class="article__title-h2">AUCUN TITRE</h2>
+        <p class="article__category">AUNCUNE CATEGORY</p>
       </div>
       <div class="article__rigth-text">
-        <p class="article__price">899€<span class="article__price--min">99</span></p>
+        <p class="article__price">XXX</p>
+        <p class="article__price--min">XX</p>
       </div>
     </div>
 
     <p class="article__description">
-      Confortable sofa au design scandinave, parfait pour vos moments de détente
+      Aucune description.
     </p>
 
     <div class="article__button">

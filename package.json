@@ -16,6 +16,7 @@
     "vitest": "^2.1.1"
   },
   "dependencies": {
+    "crypto-js": "^4.2.0",
     "the-new-css-reset": "^1.11.3"
   }
 }
