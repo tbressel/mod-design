@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Let's build the Docker image
-        run: docker build -t --name mob-design:v0.2 .
+        run: docker build -t mob-design .
 
       - name: Let's list the Docker images
         run: docker images
@@ -27,5 +27,5 @@ jobs:
 
       - name: Now let's push the Docker image !
         run: |
-            docker tag mob-design ${{ secrets.DOCKER_USERNAME }}/mob-design:v0.2
-            docker push ${{ secrets.DOCKER_USERNAME }}/mob-design:v0.2
+            docker tag mob-design ${{ secrets.DOCKER_USERNAME }}/mob-design:latest
+            docker push ${{ secrets.DOCKER_USERNAME }}/mob-design:latest
