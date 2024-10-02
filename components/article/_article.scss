@@ -60,7 +60,14 @@
 }
 
 
-
+.product-banner {
+    font-family: 'Abril Fatface';
+    font-size: 2.5rem;
+    background-color: var(--air-force-blue);
+    text-align: center;
+    color: var(--white);
+    padding: 1rem;
+}
 
 @media screen and (min-width: 980px) {
 

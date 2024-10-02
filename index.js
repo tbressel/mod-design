@@ -61,9 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Event listener  when scrolling
   window.addEventListener("scroll", () => {
     const elementTextSize =
-      document.querySelector(".header__text").offsetHeight;
+      document.querySelector(".main__txt").offsetHeight;
     const elementImageSize =
-      document.querySelector(".main__header").offsetHeight;
+      document.querySelector(".main").offsetHeight;
     if (window.scrollY > (elementImageSize - elementTextSize) / 2) {
       document.querySelector(".header").classList.add("bg-header");
     }

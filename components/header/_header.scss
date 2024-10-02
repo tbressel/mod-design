@@ -1,18 +1,17 @@
-
 /* Header */
 .header {
     position: fixed;
     width: 100%;
-    z-index: 500; 
+    z-index: 500;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
 
-    &__ttl {      
+    &__ttl {
         font-family: 'Abril Fatface';
         color: var(--black);
-        font-size: 2.5rem;   
+        font-size: 2.5rem;
     }
 
     &__burger-btn::after {
@@ -20,7 +19,7 @@
     }
 }
 
-.main__header {
+.main {
     background-image: url(/assets/img/home.jpeg);
     width: auto;
     background-size: cover;
@@ -28,25 +27,32 @@
     background-position-y: center;
     height: 20rem;
     padding: 5rem 1rem;
+
+    &__txt {
+        font-size: 1.8rem;
+        font-family: 'Work Sans Light Italic';
+        text-align: right;
+        line-height: 3rem;
+        padding: 2rem 0;
+    }
 }
-
-
-.header__text {
-    font-size: 1.8rem;
-    text-align: right;
-    line-height: 3rem;
-    padding: 2rem 0;
-}
-
 
 
 @media screen and (min-width: 980px) {
-    .main__header {
+    .main {
         height: 30rem;
         background-position-y: bottom;
         justify-content: center;
         display: flex;
+        
+        &__txt {
+            font-size: 2.8rem;
+            line-height: 6rem;
+            max-width: 1400px;
+            width: 100%;
+        }
     }
+
     .header {
         background-color: transparent;
         max-width: 1400px;
@@ -55,23 +61,6 @@
             display: none;
         }
     }
-
-    .header__text {
-        font-size: 2.8rem;
-        line-height: 6rem;
-
-    }
-
-    .main__text {
-        display: flex;
-        width: 100%;
-        justify-content: flex-end;
-        max-width: 1400px;
-    }
-
-
-  
-  
 
     .navigation {
         display: flex;
