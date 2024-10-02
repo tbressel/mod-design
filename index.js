@@ -20,6 +20,8 @@ import {
   getArticles,
 } from "./components/article/article.service.js";
 
+import { filterByCategory, productPages } from "./components/categories/categories.service.js";
+
 ///////////////////////////////////
 ///////// DOM Content   ///////////
 ///////////////////////////////////
@@ -49,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     createCategoryList(category);
   } 
 
+
   // Event listeners for overlay
   const overlayElement = document.querySelector(".overlay");
   toggleOverlay(overlayElement);
@@ -77,5 +80,14 @@ document.addEventListener("DOMContentLoaded", () => {
     listenHeaderLinks(event);
     listenOverlayLinks(event);
     listenFooterLinks(event, components, createComponent);
+
+    if (event.target.classList.contains("category__img")) {
+      const products = filterByCategory(jsonData, event.target.alt);
+      const pages = productPages(products);
+      console.log(pages);
+      document.getElementById("main-target").innerHTML = "";
+
+    };
   });
 });
+

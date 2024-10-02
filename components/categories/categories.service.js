@@ -41,3 +41,19 @@ export function createCategoriesJsonData(data) {
 }
 
 
+
+
+export function filterByCategory(jsonData, category) {
+  const newData = Array.isArray(jsonData) ? jsonData : [jsonData];
+  const result = newData.filter(product => product.category === category);
+  return result
+}
+
+export function productPages(products) {
+  const pages = Math.ceil(products.length / 4);
+  const productPages = [];
+  for (let i = 0; i < pages; i++) {
+    productPages.push(products.slice(i * 4, i * 4 + 4));
+  }
+  return productPages;
+}
