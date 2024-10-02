@@ -61,7 +61,7 @@
 <template id="main-template">
   <main>
     <section class="main__header">
-
+      
       <div class="main__text">
         <p class="header__text text-header-italic">
           Votre <span class="text-header-regular sinoipa text-header-bold-work">intérieur </span><br>réinventé
@@ -79,8 +79,8 @@
       <h1 class="text-title-h1">Nos dernières nouveauté</h1>
     </section>
 
-    <ul class="main__articles">
-    </ul>
+    <section class="main__articles">
+    </section>
 
   </main>
 </template>
@@ -123,29 +123,6 @@
 </template>
 
 
-<!-- CATEGORIES -->
-<template id="categories-template">
-  <div class="categories__main">
-    <div class="categories__title banner-categories">
-      <h1 class="categories-title-h1 sinoipa bg-transparent">Notre Collection<h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque est ut laudantium neque explicabo natus
-            iure similique voluptatibus ipsa magnam porro, odio consectetur quos perspiciatis. Amet quo repudiandae
-            dolorem. </p>
-    </div>
-
-    <ul id="categories-list" class="categories__list"></ul>
-  </div>
-</template>
-
-
-<!-- CATEGORY -->
-<template id="category-template">
-  <li id="" class="category-card text-center">
-    <img src="" alt="">
-    <p class="category__title"></p>
-  </li>
-</template>
-
 <!-- ABOUT  -->
 <template id="about-template">
   <div>
@@ -162,10 +139,10 @@
         <a id="footer-link-1" href="#">Qui sommes-nous ?</a>
       </li>
       <li>
-        <a id="footer-link-2" href="#">Mentions légales</a>
+        <a  id="footer-link-2" href="#">Mentions légales</a>
       </li>
       <li>
-        <a id="footer-link-3" href="#">CGV</a>
+        <a  id="footer-link-3" href="#">CGV</a>
       </li>
     </ul>
 
@@ -220,7 +197,7 @@
 
 <!-- ARTICLE CARD -->
 <template id="article-template">
-  <li id="0" class="article__container">
+  <div id="0" class="article__container">
     <div class="article__image">
       <img src="" alt="">
     </div>
@@ -244,5 +221,28 @@
       <button type="button" class="btn text-button-abril">Découvrir</button>
     </div>
 
+  </div>
+</template>
+
+<!-- CATEGORIES -->
+<template id="categories-template">
+  <div class="categories__main">
+    <div class="categories__title banner-categories">
+      <h1 class="categories-title-h1 sinoipa bg-transparent">Notre Collection<h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque est ut laudantium neque explicabo natus
+            iure similique voluptatibus ipsa magnam porro, odio consectetur quos perspiciatis. Amet quo repudiandae
+            dolorem. </p>
+    </div>
+
+    <ul id="categories-list" class="categories__list"></ul>
+  </div>
+</template>
+
+
+<!-- CATEGORY -->
+<template id="category-template">
+  <li id="" class="category-card text-center">
+    <img src="" alt="">
+    <p class="category__title"></p>
   </li>
 </template>
