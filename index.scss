@@ -57,7 +57,7 @@
 .active {
     border-bottom: var(--sinopia) 2px solid;
 }
-.burger-button::after {
+.burger-btn::after {
     content: url('./assets/img/burger.svg');
 }
 .cross-button::after {

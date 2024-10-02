@@ -65,10 +65,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const elementImageSize =
       document.querySelector(".main__header").offsetHeight;
     if (window.scrollY > (elementImageSize - elementTextSize) / 2) {
-      document.querySelector(".header__top").classList.add("bg-header");
+      document.querySelector(".header").classList.add("bg-header");
     }
     if (window.scrollY === 0) {
-      document.querySelector(".header__top").classList.remove("bg-header");
+      document.querySelector(".header").classList.remove("bg-header");
     }
   });
 

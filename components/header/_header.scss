@@ -1,5 +1,27 @@
 
 /* Header */
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 500; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    &__ttl {      
+        font-family: 'Abril Fatface';
+        color: var(--black);
+        font-size: 2.5rem;   
+    }
+
+    &__nav {
+
+    }
+
+}
+
+
 .main__header {
     background-image: url(/assets/img/home.jpeg);
     width: auto;
@@ -10,16 +32,6 @@
     padding: 5rem 1rem;
 }
 
-.header__top {
-    position: fixed;
-    width: 100%;
-    z-index: 500;
-   
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-}
 
 .header__text {
     font-size: 1.8rem;
@@ -37,7 +49,7 @@
         justify-content: center;
         display: flex;
     }
-    .header__top {
+    .header {
         background-color: transparent;
         max-width: 1400px;
     }
@@ -55,7 +67,7 @@
         max-width: 1400px;
     }
 
-    .burger-button,
+    .burger-btn,
     .cross-button {
         display: none;
     }
