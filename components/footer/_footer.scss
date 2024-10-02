@@ -40,6 +40,16 @@
 }
 
 
+    .instagram-btn::after {
+        content: url('./assets/img/instagram.svg');
+    }
+    .tiktok-btn::after {
+        content: url('./assets/img/tiktok.svg');
+    }
+    .mastodon-btn::after {
+        content: url('./assets/img/mastodon.svg');
+    }
+
 
 
 @media screen and (min-width: 980px) {
