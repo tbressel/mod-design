@@ -11,7 +11,7 @@
   <div id="app">
     <div id="navigation-target" class="navigation"></div>
     <div id="header-target"></div>
-    <div id="main-target"></div>
+    <main id="main-target"></main>
     <div id="footer-target"></div>
   </div>
   <script type="module" src="/index.js"></script>
@@ -22,63 +22,61 @@
 <!-- NAVIGATION -->
 <template id="navigation-template">
   <header class="header">
-      <p class="header__ttl">Mob<span class="air-force-blue">D</span><span>esign</p>
-        <button id="burger" type="button" class="header__burger-btn" aria-label="Ouvrir la navigation">
-        </button>
+    <p class="header__ttl">Mob<span class="air-force-blue">D</span><span>esign</p>
+    <button id="burger" type="button" class="header__burger-btn" aria-label="Ouvrir la navigation">
+    </button>
   </header>
 </template>
 
 <!-- OVERLAY -->
 <template id="header-template">
-    <div class="overlay hidden">
-      <div class="overlay__top">
-        <p class="overlay__ttl">Mob<span class="air-force-blue">D</span><span>esign</p>
-        <button id="cross" type="button" class="overlay__cross-btn" aria-label="Fermer la navigation">
-        </button>
-      </div>
-      <ul class="overlay__links">
-        <li>
-          <a class="active" href="#">Accueil</a>
-        </li>
-        <li>
-          <a href="#">Canapés</a>
-        </li>
-        <li>
-          <a href="#">Décoration</a>
-        </li>
-        <li>
-          <a href="#">Mes coups de coeur</a>
-        </li>
-      </ul>
+  <div class="overlay hidden">
+    <div class="overlay__top">
+      <p class="overlay__ttl">Mob<span class="air-force-blue">D</span><span>esign</p>
+      <button id="cross" type="button" class="overlay__cross-btn" aria-label="Fermer la navigation">
+      </button>
     </div>
+    <ul class="overlay__links">
+      <li>
+        <a class="active" href="#">Accueil</a>
+      </li>
+      <li>
+        <a href="#">Canapés</a>
+      </li>
+      <li>
+        <a href="#">Décoration</a>
+      </li>
+      <li>
+        <a href="#">Mes coups de coeur</a>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <!-- MAIN HOME  -->
 <template id="main-template">
-  <main>
-    <section class="main__header">
-      
-      <div class="main__text">
-        <p class="header__text text-header-italic">
-          Votre <span class="text-header-regular sinoipa text-header-bold-work">intérieur </span><br>réinventé
-          avec <span class="text-header-regular air-force-blue text-header-bold-abril">style</span>
-        </p>
-      </div>
+  <section class="main__header">
 
-    </section>
+    <div class="main__text">
+      <p class="header__text text-header-italic">
+        Votre <span class="text-header-regular sinoipa text-header-bold-work">intérieur </span><br>réinventé
+        avec <span class="text-header-regular air-force-blue text-header-bold-abril">style</span>
+      </p>
+    </div>
 
-    <section id="main__categories">
-    </section>
+  </section>
+
+  <section id="categories-target">
+  </section>
 
 
-    <section class="banner">
-      <h1 class="text-title-h1">Nos dernières nouveauté</h1>
-    </section>
+  <section class="banner">
+    <h1 class="text-title-h1">Nos dernières nouveauté</h1>
+  </section>
 
-    <section class="main__articles">
-    </section>
+  <section class="main__articles">
+  </section>
 
-  </main>
 </template>
 
 
@@ -135,10 +133,10 @@
         <a id="footer-link-1" href="#">Qui sommes-nous ?</a>
       </li>
       <li>
-        <a  id="footer-link-2" href="#">Mentions légales</a>
+        <a id="footer-link-2" href="#">Mentions légales</a>
       </li>
       <li>
-        <a  id="footer-link-3" href="#">CGV</a>
+        <a id="footer-link-3" href="#">CGV</a>
       </li>
     </ul>
 
@@ -193,25 +191,23 @@
 
 <!-- ARTICLE CARD -->
 <template id="article-template">
-  <div id="0" class="article__container">
+  <div id="" class="article__container">
     <div class="article__image">
       <img src="" alt="">
     </div>
 
     <div class="article__top-text">
       <div class="article__left-text">
-        <h2 class="article__title-h2">AUCUN TITRE</h2>
-        <p class="article__category">AUNCUNE CATEGORY</p>
+        <h2 class="article__title-h2"></h2>
+        <p class="article__category"></p>
       </div>
       <div class="article__rigth-text">
-        <p class="article__price">XXX</p>
-        <p class="article__price--min">XX</p>
+        <p class="article__price"></p>
+        <p class="article__price--min"></p>
       </div>
     </div>
 
-    <p class="article__description">
-      Aucune description.
-    </p>
+    <p class="article__description"></p>
 
     <div class="article__button">
       <button type="button" class="btn text-button-abril">Découvrir</button>
@@ -222,23 +218,24 @@
 
 <!-- CATEGORIES -->
 <template id="categories-template">
-  <div class="categories__main">
-    <div class="categories__title banner-categories">
-      <h1 class="categories-title-h1 sinoipa bg-transparent">Notre Collection<h1>
+  <div class="categories">
+    <header class="categories__container">
+      <h2 class="categories__ttl sinoipa bg-transparent">Notre Collection<h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque est ut laudantium neque explicabo natus
             iure similique voluptatibus ipsa magnam porro, odio consectetur quos perspiciatis. Amet quo repudiandae
-            dolorem. </p>
-    </div>
+            dolorem.
+          </p>
+    </header>
 
-    <ul id="categories-list" class="categories__list"></ul>
+    <ul id="category-target" class="category__container"></ul>
   </div>
 </template>
 
 
 <!-- CATEGORY -->
 <template id="category-template">
-  <li id="" class="category-card text-center">
+  <li id="" class="category__card text-center">
     <img src="" alt="">
-    <p class="category__title"></p>
+    <p class="category__ttl"></p>
   </li>
 </template>

@@ -1,32 +1,36 @@
-.categories__main {
+.categories {
     background: linear-gradient(to right, #9797971f 75%, transparent 75%);
     margin: 2rem 0;
-}
 
-.categories-title-h1 {
-    font-family: 'Abril Fatface';
-    font-size: 2.5rem;
-    background-color: var(--air-force-blue);
-    text-align: center;
-    color: var(--white);
-    padding: 1rem 0;
-}
+    &__container {
+        font-family: 'Work Sans';
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
 
-.categories__list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-.banner-categories {
-    font-family: 'Work Sans';
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
+    &__ttl {
+        font-family: 'Abril Fatface';
+        font-size: 2.5rem;
+        background-color: var(--air-force-blue);
+        text-align: center;
+        color: var(--white);
+        padding: 1rem 0;
+    }
 }
 
 
-.category__title {
-    font-family: 'Work Sans';
-    font-size: 1.5rem;
+.category {
+    &__container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    &__ttl {
+        font-family: 'Work Sans';
+        font-size: 1.5rem;
+        text-transform: capitalize;
+    }
 }
