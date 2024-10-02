@@ -18,3 +18,5 @@ export function createArticle(component, product) {
   template.querySelector(".article__image img").alt = product.title;
   goalElement.appendChild(template);
 }
+
+

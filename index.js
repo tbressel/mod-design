@@ -9,12 +9,10 @@ import "./index.scss";
 // Components
 import { createComponent, components } from "./components.js";
 import { createArticle } from "./components/article/article.component.js";
+import { createCategoryList } from "./components/categories/categories.component.js";
 import { listenFooterLinks } from "./components/footer/footer.component.js";
 import { listenHeaderLinks } from "./components/header/header.component.js";
-import {
-  listenOverlayLinks,
-  toggleOverlay,
-} from "./components/overlay/overlay.component.js";
+import { listenOverlayLinks, toggleOverlay} from "./components/overlay/overlay.component.js";
 
 // Services
 import {
@@ -27,13 +25,7 @@ import {
 ///////////////////////////////////
 document.addEventListener("DOMContentLoaded", () => {
   // Create the components
-  const componentNames = [
-    "main",
-    "header",
-    "footer",
-    "navigation",
-    "categories",
-  ];
+  const componentNames = ["main","header","footer","navigation","categories"];
 
   componentNames.forEach((name) => {
     const component = components[name];
@@ -43,17 +35,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // Get full datas
   getArticles();
 
-  // Get the JSON data from the local storage
-  const jsonData = JSON.parse(localStorage.getItem("jsonData"));
-
   // Display the 4 most recent products
+  const jsonData = JSON.parse(localStorage.getItem("jsonData"));
   const fourLastRecentProducts = getRecentProducts(jsonData);
   for (let i = 0; i < 4; i++) {
     const article = components.article;
     createArticle(article, fourLastRecentProducts[i]);
   }
 
-
+  // Display the categories
+  const jsonDataCategories = JSON.parse(localStorage.getItem("jsonCategories"));
+  for (let category of jsonDataCategories) {
+    createCategoryList(category);
+  } 
 
   // Event listeners for overlay
   const overlayElement = document.querySelector(".overlay__main");
