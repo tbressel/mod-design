@@ -71,13 +71,16 @@
 
     </section>
 
+    <section id="main__categories">      
+    </section>
+    
 
     <section class="banner">
       <h1 class="text-title-h1">Nos dernières nouveauté</h1>
     </section>
 
-    <section class="main__articles">
-    </section>
+    <ul class="main__articles">
+    </ul>
 
   </main>
 </template>
@@ -119,6 +122,39 @@
   </main>
 </template>
 
+
+<!-- CATEGORIES -->
+<template id="categories-template">
+    <div class="categories__main">
+      <div class="categories__title banner-categories">
+        <h1 class="categories-title-h1 sinoipa bg-transparent">Notre Collection<h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque est ut laudantium neque explicabo natus iure similique voluptatibus ipsa magnam porro, odio consectetur quos perspiciatis. Amet quo repudiandae dolorem. </p>
+      </div>
+
+      <ul id="categories-list" class="categories__list">
+        <li class="text-center">
+          <img src="images/canapes.png" alt="Canapés">
+          <p class="category__title">Canapés</p>
+        </li>
+        <li class="text-center">
+          <img src="images/chaises.png" alt="Chaises">
+          <p class="category__title">Chaises</p>
+        </li>
+        <li class="text-center">
+          <img src="images/decoration.png" alt="Décoration">
+          <p class="category__title">Décoration</p>
+        </li>
+        <li class="text-center">
+          <img src="images/luminaires.png" alt="Luminaires">
+          <p class="category__title">Luminaires</p>
+        </li>
+        <li class="text-center">
+          <img src="images/rangements.png" alt="Rangements">
+          <p class="category__title">Rangements</p>
+        </li>
+      </ul>
+    </div>
+</template>
 
 <!-- ABOUT  -->
 <template id="about-template">
@@ -194,7 +230,7 @@
 
 <!-- ARTICLE CARD -->
 <template id="article-template">
-  <div id="0" class="article__container">
+  <li id="0" class="article__container">
     <div class="article__image">
       <img src="" alt="">
     </div>
@@ -218,5 +254,5 @@
       <button type="button" class="btn text-button-abril">Découvrir</button>
     </div>
 
-  </div>
+  </li>
 </template>

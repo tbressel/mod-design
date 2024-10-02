@@ -12,8 +12,13 @@
 .bg-air-force-blue {
     background-color: var(--air-force-blue);
 }
-
-
+.bg-transparent {
+    background-color: transparent;
+}
+.bg-header {
+    background-color: var(--white);
+    transition: 1000ms;
+}
 
 /* Text colors */
 .white {

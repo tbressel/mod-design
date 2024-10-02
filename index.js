@@ -11,17 +11,29 @@ import { createComponent, components } from "./components.js";
 import { createArticle } from "./components/article/article.component.js";
 import { listenFooterLinks } from "./components/footer/footer.component.js";
 import { listenHeaderLinks } from "./components/header/header.component.js";
-import { listenOverlayLinks, toggleOverlay } from "./components/overlay/overlay.component.js";
+import {
+  listenOverlayLinks,
+  toggleOverlay,
+} from "./components/overlay/overlay.component.js";
 
 // Services
-import { getRecentProducts, getArticles } from "./components/article/article.service.js";
+import {
+  getRecentProducts,
+  getArticles,
+} from "./components/article/article.service.js";
 
 ///////////////////////////////////
 ///////// DOM Content   ///////////
 ///////////////////////////////////
 document.addEventListener("DOMContentLoaded", () => {
   // Create the components
-  const componentNames = ["main", "header", "footer", "navigation"];
+  const componentNames = [
+    "main",
+    "header",
+    "footer",
+    "navigation",
+    "categories",
+  ];
 
   componentNames.forEach((name) => {
     const component = components[name];
@@ -41,6 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
     createArticle(article, fourLastRecentProducts[i]);
   }
 
+
+
   // Event listeners for overlay
   const overlayElement = document.querySelector(".overlay__main");
   toggleOverlay(overlayElement);
@@ -52,8 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Event listener  when scrolling
   window.addEventListener("scroll", () => {
-    const elementTextSize = document.querySelector(".header__text").offsetHeight;
-    const elementImageSize = document.querySelector(".main__header").offsetHeight;
+    const elementTextSize =
+      document.querySelector(".header__text").offsetHeight;
+    const elementImageSize =
+      document.querySelector(".main__header").offsetHeight;
     if (window.scrollY > (elementImageSize - elementTextSize) / 2) {
       document.querySelector(".header__top").classList.add("bg-header");
     }

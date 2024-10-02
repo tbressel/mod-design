@@ -22,6 +22,7 @@ export const components = {
   article: ["article-template", "main__articles"],
   navigation: ["navigation-template", "navigation-target"],
   text: ["text-template", "main-target"],
+  categories: ["categories-template","main__categories"]
 };
 
 
