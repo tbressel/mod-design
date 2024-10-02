@@ -42,13 +42,27 @@ export function createCategoriesJsonData(data) {
 
 
 
-
+/**
+ * 
+ * Function to filter products by category
+ * 
+ * @param {*} jsonData 
+ * @param {*} category 
+ * @returns 
+ */
 export function filterByCategory(jsonData, category) {
   const newData = Array.isArray(jsonData) ? jsonData : [jsonData];
   const result = newData.filter(product => product.category === category);
   return result
 }
 
+/**
+ * 
+ * Function to create product pages
+ * 
+ * @param {*} products 
+ * @returns 
+ */
 export function productPages(products) {
   const pages = Math.ceil(products.length / 4);
   const productPages = [];
