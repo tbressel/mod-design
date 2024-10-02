@@ -23,23 +23,20 @@
 <template id="navigation-template">
   <header class="header">
       <p class="header__ttl">Mob<span class="air-force-blue">D</span><span>esign</p>
-        <button id="burger" type="button" class="header__nav burger-btn" aria-label="Ouvrir la navigation">
+        <button id="burger" type="button" class="header__burger-btn" aria-label="Ouvrir la navigation">
         </button>
   </header>
 </template>
 
 <!-- OVERLAY -->
 <template id="header-template">
-  <header>
-    <div class="overlay__main hidden">
+    <div class="overlay hidden">
       <div class="overlay__top">
-        <p class="text-title-secondary black text-title-main">Mob<span class="air-force-blue">D</span><span>esign</p>
-        <button id="cross" type="button" class="overlay__navigation cross-button" aria-label="Fermer la navigation">
+        <p class="overlay__ttl">Mob<span class="air-force-blue">D</span><span>esign</p>
+        <button id="cross" type="button" class="overlay__cross-btn" aria-label="Fermer la navigation">
         </button>
       </div>
-
-
-      <ul class="overlay__links text-link">
+      <ul class="overlay__links">
         <li>
           <a class="active" href="#">Accueil</a>
         </li>
@@ -54,7 +51,6 @@
         </li>
       </ul>
     </div>
-  </header>
 </template>
 
 <!-- MAIN HOME  -->

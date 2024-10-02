@@ -1,6 +1,6 @@
 export function listenOverlayLinks(event) {
     if (event.target && event.target === document.getElementById("cross")) {
-        document.querySelector(".overlay__main").classList.toggle("hidden");
+        document.querySelector(".overlay").classList.toggle("hidden");
     }
 }
 

@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   } 
 
   // Event listeners for overlay
-  const overlayElement = document.querySelector(".overlay__main");
+  const overlayElement = document.querySelector(".overlay");
   toggleOverlay(overlayElement);
 
   // Event listener on resize window
