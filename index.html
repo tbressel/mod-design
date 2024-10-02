@@ -74,7 +74,7 @@
     <h1 class="text-title-h1">Nos dernières nouveauté</h1>
   </section>
 
-  <section class="main__articles">
+  <section id="product-target" class="product">
   </section>
 
 </template>
@@ -115,7 +115,6 @@
 
   </main>
 </template>
-
 
 <!-- ABOUT  -->
 <template id="about-template">
@@ -189,30 +188,26 @@
   </footer>
 </template>
 
-<!-- ARTICLE CARD -->
+<!-- PRODUCT CARD -->
 <template id="article-template">
-  <div id="" class="article__container">
-    <div class="article__image">
+  <div id="" class="product__container">
+    <div class="product__image">
       <img src="" alt="">
     </div>
 
-    <div class="article__top-text">
-      <div class="article__left-text">
-        <h2 class="article__title-h2"></h2>
-        <p class="article__category"></p>
+    <div class="product__header">
+      <div class="product__header-left-bloc">
+        <h2 class="product__ttl"></h2>
+        <p class="product__category"></p>
       </div>
-      <div class="article__rigth-text">
-        <p class="article__price"></p>
-        <p class="article__price--min"></p>
+      <div class="product__header-right-bloc">
+        <p class="product__price-int"></p>
+        <p class="product__price-dec"></p>
       </div>
     </div>
 
-    <p class="article__description"></p>
-
-    <div class="article__button">
+    <p class="product__description"></p>
       <button type="button" class="btn text-button-abril">Découvrir</button>
-    </div>
-
   </div>
 </template>
 
@@ -230,7 +225,6 @@
     <ul id="category-target" class="category__container"></ul>
   </div>
 </template>
-
 
 <!-- CATEGORY -->
 <template id="category-template">

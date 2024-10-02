@@ -19,7 +19,7 @@ export const components = {
   header: ["header-template", "header-target"],
   footer: ["footer-template", "footer-target"],
   main: ["main-template", "main-target"],
-  article: ["article-template", "main__articles"],
+  article: ["article-template", "product-target"],
   navigation: ["navigation-template", "navigation-target"],
   text: ["text-template", "main-target"],
   categories: ["categories-template","categories-target"],
