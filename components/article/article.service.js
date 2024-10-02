@@ -63,9 +63,10 @@ function isDataChanged(jsonData) {
  * @returns
  */
 export function getRecentProducts(data) {
-  return data
-    .sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded))
-    .slice(0, 4);
+  const sortedData = data.sort((a,b) => b.dateAdded - a.dateAdded)
+  const selectData = sortedData.slice(0,4);
+  console.log(selectData)
+  return selectData
 }
 
 
