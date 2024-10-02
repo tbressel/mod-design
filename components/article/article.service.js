@@ -63,10 +63,21 @@ function isDataChanged(jsonData) {
  * @returns
  */
 export function getRecentProducts(data) {
-  const sortedData = data.sort((a,b) => b.dateAdded - a.dateAdded)
+  const sortedData = data.sort((a,b) => getTimestampFromDate(b) - getTimestampFromDate(a))
   const selectData = sortedData.slice(0,4);
   console.log(selectData)
   return selectData
 }
 
 
+
+/**
+ * 
+ * Function to convert text date into a timestamp value
+ * 
+ * @param {*} data 
+ * @returns 
+ */
+function getTimestampFromDate(data) {
+  return new Date(data.dateAdded).getTime()
+}
