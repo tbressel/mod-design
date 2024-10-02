@@ -1,3 +1,10 @@
+
+/**
+ * 
+ * Function to listen to the overlay links
+ * 
+ * @param {*} event 
+ */
 export function listenOverlayLinks(event) {
     if (event.target && event.target === document.getElementById("cross")) {
         document.querySelector(".overlay").classList.toggle("hidden");

@@ -1,19 +1,33 @@
-export function listenFooterLinks(event, components, createComponent) {
-    // Event listener for the footer links
-    if (event.target && event.target === document.getElementById("footer-link-1")) {
-      document.getElementById("main-target").innerHTML = "";
-      let component = components.text;
-      createComponent(component);
-    }
-    if (event.target && event.target === document.getElementById("footer-link-2")) {
-      document.getElementById("main-target").innerHTML = "";
-      let component = components.text;
-      createComponent(component);
-    }
-    if (event.target && event.target === document.getElementById("footer-link-3")) {
-      document.getElementById("main-target").innerHTML = "";
-      let component = components.text;
-      createComponent(component);
-    }
+import { toggleOverlay } from "../overlay/overlay.component.js";
 
+/**
+ *
+ * Function to listen to the footer links
+ *
+ * @param {*} event
+ * @param {*} components
+ * @param {*} createComponent
+ */
+export function listenFooterLinks(event, components, createComponent) {
+  // Event listener for the footer links
+  handleFooterLinkClick(event, components, createComponent, "footer-link-1");
+  handleFooterLinkClick(event, components, createComponent, "footer-link-2");
+  handleFooterLinkClick(event, components, createComponent, "footer-link-3");
+}
+
+/**
+ *
+ * Function to handle the footer link click
+ *
+ * @param {*} event
+ * @param {*} components
+ * @param {*} createComponent
+ * @param {*} link
+ */
+function handleFooterLinkClick(event, components, createComponent, link) {
+  if (event.target && event.target === document.getElementById(link)) {
+    document.getElementById("main-target").innerHTML = "";
+    createComponent(components.text);
+    toggleOverlay(document.querySelector(".overlay"));
   }
+}
