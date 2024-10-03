@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "footer",
     "navigation",
     "categories",
+    "find",
   ];
 
   componentNames.forEach((name) => {
@@ -90,5 +91,20 @@ document.addEventListener("DOMContentLoaded", () => {
     listenFooterLinks(event, components, createComponent);
     listenCategoriesLinks(event, components, createComponent);
     listenCarouselButtons(event);
+
+    if (event.target.classList.contains("js-find-btn")) {
+      loadingFinderPage();
+    }
   });
+
+  // Définir la fonction loadingFinderPage
+  function loadingFinderPage() {
+    const elementField = document.getElementById("find-field");
+
+    const value = elementField.value;
+    console.log(value);
+  }
+
+  // Ajouter un écouteur d'événement au document pour détecter les clics sur le bouton
+  document.addEventListener("click", function (event) {});
 });

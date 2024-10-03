@@ -4,9 +4,10 @@
     width: 100%;
     z-index: 500;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    // justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    // padding: 1rem;
 
     &__ttl {
         font-family: 'Abril Fatface';
@@ -16,6 +17,15 @@
 
     &__burger-btn::after {
         content: url('./assets/img/burger.svg');
+    }
+
+    &__top {
+        position: relative;
+        width: 100%;
+        z-index: 500;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
     }
 }
 

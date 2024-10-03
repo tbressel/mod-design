@@ -24,9 +24,14 @@
 <!-- HEADER -->
 <template id="navigation-template">
   <header class="header" role="head banner">
-    <p class="header__ttl">Mob<span class="air-force-blue">D</span><span>esign</p>
-    <button id="burger" type="button" class="header__burger-btn" aria-label="Ouvrir la navigation">
-    </button>
+    <div class="header__top">
+
+      <p class="header__ttl">Mob<span class="air-force-blue">D</span><span>esign</p>
+        <button id="burger" type="button" class="header__burger-btn" aria-label="Ouvrir la navigation"></button>
+      </div>
+          <!-- <section id="find-target"></section> -->
+
+
   </header>
 </template>
 
@@ -38,6 +43,7 @@
       <button id="cross" type="button" class="overlay__cross-btn" aria-label="Fermer la navigation" aria-controls="navigation-target">
       </button>
     </div>
+    <section id="find-target"></section>
     <ul class="overlay__links">
       <li>
         <a class="active" href="#">Accueil</a>
@@ -238,3 +244,14 @@
     <button type="button" class="pagination__btn" aria-label="Page suivante">&gt;</button>
   </div>
 </template>
+
+<!-- RECHERCHE -->
+ <template id="find-template">
+    <div class="find">
+      <div class="find__icon"></div>
+      <form action="" class="find__form">
+        <input id="find-field" class="find__field" type="text" placeholder="Chercher ...">
+      </form>
+      <button type="button" class="category__btn bg-air-force-blue white js-find-btn">&gt;</button>
+    </div>
+ </template>

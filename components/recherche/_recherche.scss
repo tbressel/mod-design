@@ -1,0 +1,40 @@
+.find {
+    //position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+
+
+    &__icon::before {
+        content: url('./assets/img/search.svg');
+        padding: 1rem 0;
+        margin-left: 1rem;
+    }
+
+    &__form {
+        background-color: var(--white);
+        width: 100%;
+        color: var(--air-force-blue);
+        padding: 1rem 0.5rem;
+    }
+
+
+    &__field {
+        font-size: 1rem;
+        font-family: 'Work Sans';
+    }
+
+    &__btn {
+        width: 22px;
+        height: 22px;
+        border-radius: 4px;
+        background-color: var(--air-force-blue);
+        color: var(--white);
+        font-size: 1rem;
+        font-family: 'Work Sans Bold';
+        padding: 1rem;
+        margin-right: 1rem;
+    }
+
+}

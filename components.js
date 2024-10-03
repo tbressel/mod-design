@@ -27,6 +27,7 @@ export const components = {
   category: ["category-template", "category-target"],
   productcat: ["product-cat-template", "main-target"],
   pagination: ["pagination-template", "pagination-target"],
+  find: ["find-template", "find-target"]
 };
 
 
