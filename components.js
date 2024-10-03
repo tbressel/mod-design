@@ -23,7 +23,8 @@ export const components = {
   navigation: ["navigation-template", "navigation-target"],
   text: ["text-template", "main-target"],
   categories: ["categories-template","categories-target"],
-  category: ["category-template", "category-target"]
+  category: ["category-template", "category-target"],
+  productcat: ["product-cat-template", "main-target"]
 };
 
 

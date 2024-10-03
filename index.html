@@ -59,14 +59,14 @@
 <template id="main-template">
   <section class="main"  aria-labelledby="main-ttl">
     <div class="main__txt">
-      <p  id="main-ttl">
+      <p id="main-ttl">
         Votre <span class="sinoipa bold-work">intérieur </span><br>réinventé
         avec <span class="air-force-blue bold-abril">style</span>
       </p>
     </div>
   </section>
 
-  <section id="categories-target" aria-labelledby="categories-title"></section>
+  <section id="categories-target" aria-labelledby="categories-ttl"></section>
 
   <section>
     <h2 id="categories-ttl" class="product-banner">Nos dernières nouveauté</h2>
@@ -75,7 +75,6 @@
   <section id="product-target" class="product"></section>
 
 </template>
-
 
 <!-- MAIN TEXT  -->
 <template id="text-template">
@@ -112,6 +111,24 @@
 
   </main>
 </template>
+
+<!-- MAIN PRODUCT PER CATEGORY  -->
+ <template id="product-cat-template">
+  <div class="blank-space"></div>
+
+  <section class="product-cat__bg"></section>
+  <section>
+    <h2 class="product-cat__banner">Les canapés</h2>
+    <p class="product-cat__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptate vel sequi quod commodi excepturi, impedit cupiditate dolore suscipit ducimus explicabo nesciunt dolor sunt aut modi placeat rem iusto neque!</p>
+  </section>
+
+  <!-- <section id="product-cat-target" aria-labelledby="product-cat-ttl"></section>
+
+
+  <section id="product-target" class="product"></section> -->
+
+</template>
+
 
 <!-- ABOUT  -->
 <template id="about-template">
@@ -190,7 +207,7 @@
 <!-- CATEGORY CARD-->
 <template id="category-template">
   <li id="" class="category__card text-center">
-    <img src="" alt="Image de la catégorie">
+    <img class="category__img" src="" alt="Image de la catégorie">
     <p class="category__ttl" aria-label="Titre de la catégorie"></p>
   </li>
 </template>
