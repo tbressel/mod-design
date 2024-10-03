@@ -21,6 +21,16 @@
     &__scroll {
         overflow: scroll;
     }
+
+    &__carousel {
+        position: absolute ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        left: 0;
+        margin-top: 3rem;
+    }
 }
 
 
@@ -29,7 +39,7 @@
         display: flex;
         justify-content: flex-start;
         flex-wrap: nowrap;
-        gap: 2rem;
+        gap: 4rem;
         width: max-content;
         padding: 0 2rem;
     }
@@ -43,6 +53,17 @@
     &__card {
         text-align: center;
 
+    }
+
+    &__btn {
+        width: 44px;
+        height: 44px;
+        border-radius: 4px;
+        background-color: var(--white);
+        color: var(--black);
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        font-family: 'Work Sans Bold';
     }
 }
 .product-cat {

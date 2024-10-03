@@ -126,9 +126,6 @@
 
  <section id="pagination-target"></section>
 
-
-  <!-- <section id="product-target" class="product"></section>  -->
-
 </template>
 
 
@@ -204,7 +201,13 @@
     </header>
     
     <div class="categories__scroll">
-      <ul id="category-target" class="category__container" aria-label="Liste des catégories"></ul>
+      <ul id="category-target" class="category__container" aria-label="Liste des catégories">
+        <div class="categories__carousel">
+          <button type="button" class="category__btn" aria-label="Page précédente">&lt;</button>
+          <button type="button" class="category__btn" aria-label="Page suivante">&gt;</button>
+        </div>
+      </ul>
+
     </div>
   </div>
 </template>
