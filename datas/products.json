@@ -6,7 +6,7 @@
         "imageUrl": "images/sofa-nordique-1.jpg",
         "productUrl": "produits/sofa-nordique-1.html",
         "price": 899.99,
-        "category": "canapés et fauteuils",
+        "category": "canapés",
         "colors": ["blanc", "bois"],
         "dateAdded": "2024-02-05"
     },
@@ -72,7 +72,7 @@
         "imageUrl": "images/fauteuil-borealis-7.jpg",
         "productUrl": "produits/fauteuil-borealis-7.html",
         "price": 599.99,
-        "category": "canapés et fauteuils",
+        "category": "canapés",
         "colors": ["gris", "bois"],
         "dateAdded": "2024-05-05"
     },
@@ -105,7 +105,7 @@
         "imageUrl": "images/canape-heritage-10.jpg",
         "productUrl": "produits/canape-heritage-10.html",
         "price": 1099.99,
-        "category": "canapés et fauteuils",
+        "category": "canapés",
         "colors": ["gris"],
         "dateAdded": "2024-06-15"
     },
@@ -149,7 +149,7 @@
         "imageUrl": "images/pouf-nova-14.jpg",
         "productUrl": "produits/pouf-nova-14.html",
         "price": 99.99,
-        "category": "canapés et fauteuils",
+        "category": "canapés",
         "colors": ["bois", "blanc"],
         "dateAdded": "2024-07-25"
     },

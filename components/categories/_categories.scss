@@ -1,7 +1,7 @@
 .categories {
     background: linear-gradient(to right, #9797971f 75%, transparent 75%);
     margin: 2rem 0;
-
+    
     &__container {
         font-family: 'Work Sans';
         padding: 2rem;
@@ -36,6 +36,32 @@
 
     &__card {
         text-align: center;
+
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .categories {
+        background: linear-gradient(to right, #9797971f 85%, transparent 75%);
+        background-size: 100% 85%;
+        background-repeat: no-repeat;
+
+        &__container {
+            max-width: 1400px;
+            margin: auto;
+            text-align: left;
+        }
+        &__ttl {
+            text-align: left;
+        }
+    }
+
+    .category {
+        &__container {
+            max-width: 1400px;
+            margin: auto;
+            justify-content: space-between;
+        }
 
     }
 }
