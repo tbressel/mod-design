@@ -32,7 +32,7 @@ export function createCategoriesJsonData(data) {
     jsonCategories.push({
       id: idCategory,
       category: category,
-      categoryImg: `/images/${category.toLowerCase().replaceAll("é", "e").split(' ').join('-')}.png`
+      categoryImg: `/images/${category.toLowerCase().replaceAll("é", "e").split(' ').join('-')}.webp`
     });
     idCategory++;
   });
