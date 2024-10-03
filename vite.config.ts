@@ -21,5 +21,10 @@ export default defineConfig({
     alias: [
       { find: '@assets', replacement: resolve(__dirname, "images") },
     ]
+  },
+  server: {
+    host: '192.168.1.79', 
+    port: 5173, 
+    open: true,
   }
 });
