@@ -83,9 +83,14 @@
 }
 
 
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 1100px) {
     .blank-space {
         height: 6rem;
+    }
+
+    .main-target {
+        max-width: 1400px;
+        margin: auto;
     }
     
 }

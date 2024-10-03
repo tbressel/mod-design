@@ -19,10 +19,10 @@ export function listenOverlayLinks(event) {
  * @param {*} overlayElement
  */
 export function toggleOverlay(overlayElement) {
-    if (window.innerWidth > 980 && overlayElement.classList.contains("hidden")) {
+    if (window.innerWidth > 1100 && overlayElement.classList.contains("hidden")) {
       overlayElement.classList.remove("hidden");
     }
-    if (window.innerWidth < 980 && !overlayElement.classList.contains("hidden")) {
+    if (window.innerWidth < 1100 && !overlayElement.classList.contains("hidden")) {
       overlayElement.classList.add("hidden");
     }
   }

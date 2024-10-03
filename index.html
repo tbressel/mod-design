@@ -13,7 +13,7 @@
   <div id="app">
     <div id="navigation-target" class="navigation"></div>
     <div id="header-target"></div>
-    <main id="main-target"></main>
+    <main id="main-target" class="main-target"></main>
     <div id="footer-target"></div>
   </div>
   <script type="module" src="/index.js"></script>
@@ -29,8 +29,6 @@
       <p class="header__ttl">Mob<span class="air-force-blue">D</span><span>esign</p>
         <button id="burger" type="button" class="header__burger-btn" aria-label="Ouvrir la navigation"></button>
       </div>
-          <!-- <section id="find-target"></section> -->
-
 
   </header>
 </template>
@@ -43,8 +41,9 @@
       <button id="cross" type="button" class="overlay__cross-btn" aria-label="Fermer la navigation" aria-controls="navigation-target">
       </button>
     </div>
-    <section id="find-target"></section>
+   
     <ul class="overlay__links">
+      <section id="find-target" class="find__target"></section>
       <li>
         <a class="active" href="#">Accueil</a>
       </li>
@@ -268,6 +267,6 @@
       <form action="" class="find__form">
         <input id="find-field" class="find__field" type="text" placeholder="Chercher ...">
       </form>
-      <button type="button" class="category__btn bg-air-force-blue white js-find-btn">&gt;</button>
+      <button type="button" class="find__btn bg-air-force-blue white js-find-btn">&gt;</button>
     </div>
  </template>

@@ -4,6 +4,8 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--white);
+    width: 100vw;
+    padding: 2rem;
 
 
     &__icon::before {
@@ -26,15 +28,32 @@
     }
 
     &__btn {
-        width: 22px;
-        height: 22px;
+        width: 44px;
+        height: 44px;
         border-radius: 4px;
-        background-color: var(--air-force-blue);
-        color: var(--white);
+        background-color: rgba(255, 255, 255, 0.667);
+        color: var(--black);
+        padding: 0.5rem 1rem;
         font-size: 1rem;
         font-family: 'Work Sans Bold';
-        padding: 1rem;
-        margin-right: 1rem;
     }
 
+}
+
+@media screen and (min-width: 1100px) {
+
+    .find {
+        width: auto;
+        padding: 0;
+    }
+    .results {
+        
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+
+    }
+    
+}
 }
