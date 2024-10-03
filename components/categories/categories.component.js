@@ -27,6 +27,7 @@ export function createCategoryList(category) {
  */
 export function listenCategoriesLinks(event, components, createComponent) {
   if (event.target.classList.contains("category__img")) {
+    document.scrollingElement.scrollTop = 0;
     const productData = getProductPerCategory(event);
     const numberOfPages = productData.length;
     let numberOfProducts = 0;

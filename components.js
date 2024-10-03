@@ -27,7 +27,9 @@ export const components = {
   category: ["category-template", "category-target"],
   productcat: ["product-cat-template", "main-target"],
   pagination: ["pagination-template", "pagination-target"],
-  find: ["find-template", "find-target"]
+  find: ["find-template", "find-target"],
+  results: ["results-template", "main-target"],
+  resultcard: ["article-template", "results-target"],
 };
 
 

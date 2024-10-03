@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "footer",
     "navigation",
     "categories",
-    "find",
+    "find"
   ];
 
   componentNames.forEach((name) => {
@@ -85,10 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     listenCarouselButtons(event);
 
    
-      loadingResultPage(event);
+    loadingResultPage(event);
     });
-  
-
-
-
+ 
 });
