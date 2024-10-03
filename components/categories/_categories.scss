@@ -24,6 +24,7 @@
 
     &__carousel {
         position: absolute ;
+        z-index: 20;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -36,12 +37,11 @@
 
 .category {
     &__container {
+        position: relative;
         display: flex;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
         gap: 4rem;
-        width: max-content;
         padding: 0 2rem;
+        overflow-x: auto;
     }
 
     &__ttl {
@@ -55,11 +55,15 @@
 
     }
 
+    &__img {
+        max-inline-size: none;
+    }
+
     &__btn {
         width: 44px;
         height: 44px;
         border-radius: 4px;
-        background-color: var(--white);
+        background-color: rgba(255, 255, 255, 0.667);
         color: var(--black);
         padding: 0.5rem 1rem;
         font-size: 1rem;
@@ -105,6 +109,9 @@
         &__ttl {
             text-align: left;
         }
+        &__scroll {
+            overflow: hidden;
+        }
     }
 
     .category {
@@ -112,6 +119,15 @@
             max-width: 1400px;
             margin: auto;
             justify-content: space-between;
+            overflow: hidden;
+        }
+
+        &__btn {
+        display: none;
+        }
+
+        &__img {
+            max-inline-size: 100%;
         }
 
     }

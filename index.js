@@ -12,7 +12,10 @@ import { createProductCard } from "./components/article/article.component.js";
 import { createCategoryList } from "./components/categories/categories.component.js";
 import { listenFooterLinks } from "./components/footer/footer.component.js";
 import { listenHeaderLinks } from "./components/header/header.component.js";
-import { listenCategoriesLinks } from "./components/categories/categories.component.js";
+import {
+  listenCategoriesLinks,
+  listenCarouselButtons,
+} from "./components/categories/categories.component.js";
 import {
   listenOverlayLinks,
   toggleOverlay,
@@ -23,7 +26,6 @@ import {
   getRecentProducts,
   getArticles,
 } from "./components/article/article.service.js";
-
 
 ///////////////////////////////////
 ///////// DOM Content   ///////////
@@ -87,5 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
     listenOverlayLinks(event);
     listenFooterLinks(event, components, createComponent);
     listenCategoriesLinks(event, components, createComponent);
+    listenCarouselButtons(event);
   });
 });

@@ -53,3 +53,24 @@ export function listenCategoriesLinks(event, components, createComponent) {
     createComponent(components.pagination);
   }
 }
+
+
+
+export function listenCarouselButtons(event) {
+  if (!document.querySelector(".category__btn")) return;
+  const element = document.getElementById("category-target");
+
+  if (event.target.classList.contains("js-pre-btn")) {
+    if (element) {
+      const scrollAmount = 50;
+      element.scrollLeft -= scrollAmount;
+    }
+  }
+
+  if (event.target.classList.contains("js-fwd-btn")) {
+    if (element) {
+      const scrollAmount = 50;
+      element.scrollLeft += scrollAmount;
+    }
+  }
+}
