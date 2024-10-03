@@ -29,6 +29,15 @@ export function listenCategoriesLinks(event, components, createComponent) {
   if (event.target.classList.contains("category__img")) {
     const productData = getProductPerCategory(event);
     const numberOfPages = productData.length;
+    let numberOfProducts = 0;
+
+    for (let i = 0; i < numberOfPages; i++) {
+     for (let j = 0; j < productData[i].length; j++) {
+       numberOfProducts ++;
+      }
+    }
+    console.log("Nombre de produit : ", numberOfProducts)
+    console.log("Nombre de page : ", numberOfPages)
 
     document.getElementById("main-target").innerHTML = "";
     createComponent(components.productcat);
@@ -36,9 +45,11 @@ export function listenCategoriesLinks(event, components, createComponent) {
     for (let p = 0; p < numberOfPages; p++) {
       
       const article = components.productcardcat;
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < productData[p].length; i++) {
         createProductCard(article, productData[p][i]); // article: Array, productData: Object[]
       }
     }
+
+    createComponent(components.pagination);
   }
 }

@@ -124,6 +124,8 @@
 
  <section id="product-cat-target"></section>
 
+ <section id="pagination-target"></section>
+
 
   <!-- <section id="product-target" class="product"></section>  -->
 
@@ -212,3 +214,21 @@
   </li>
 </template>
 
+
+<!-- PAGINATION -->
+<template id="pagination-template">
+  <div class="pagination">
+    <button type="button" class="pagination__btn" aria-label="Page précédente">&lt;</button>
+
+    <ul class="pagination__list" aria-label="Liste des pages">
+      <li>
+        <button type="button" class="pagination__item active" aria-label="Page 1">1</button>
+      </li>
+      <li>
+        <button type="button" class="pagination__item" aria-label="Page 2">2</button>
+      </li>
+    </ul>
+
+    <button type="button" class="pagination__btn" aria-label="Page suivante">&gt;</button>
+  </div>
+</template>

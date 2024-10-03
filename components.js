@@ -25,7 +25,8 @@ export const components = {
   text: ["text-template", "main-target"],
   categories: ["categories-template","categories-target"],
   category: ["category-template", "category-target"],
-  productcat: ["product-cat-template", "main-target"]
+  productcat: ["product-cat-template", "main-target"],
+  pagination: ["pagination-template", "pagination-target"],
 };
 
 
