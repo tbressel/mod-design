@@ -14,6 +14,7 @@
 @import "./components/categories/categories";
 @import "./components/header/header";
 @import "./components/overlay/overlay";
+@import "./components/page-navigation/page-navigation" ;
 @import "./style/text";
 @import "./style/colors";
 
@@ -76,4 +77,12 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+
+@media screen and (min-width: 980px) {
+    .blank-space {
+        height: 6rem;
+    }
+    
 }

@@ -1,9 +1,10 @@
 /**
  * Function to get a template and inject it into the DOM article
  *
- * @param {*} component
+ * @param {*} component: array with the component name and the target element
+ * @param {*} product: object with the product data
  */
-export function createArticle(component, product) {
+export function createProductCard(component, product) {
   const template = document.getElementById(component[0]).content.cloneNode(true);
   const goalElement = document.getElementById(component[1]);
   template.querySelector(".product__container").setAttribute("id", product.id);
