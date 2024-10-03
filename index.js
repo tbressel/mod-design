@@ -8,25 +8,35 @@ import "./index.scss";
 
 // Components
 import { createComponent, components } from "./components.js";
-import { createArticle } from "./components/article/article.component.js";
+import { createProductCard } from "./components/article/article.component.js";
 import { createCategoryList } from "./components/categories/categories.component.js";
 import { listenFooterLinks } from "./components/footer/footer.component.js";
 import { listenHeaderLinks } from "./components/header/header.component.js";
-import { listenOverlayLinks, toggleOverlay} from "./components/overlay/overlay.component.js";
+import { listenCategoriesLinks } from "./components/categories/categories.component.js";
+import {
+  listenOverlayLinks,
+  toggleOverlay,
+} from "./components/overlay/overlay.component.js";
 
 // Services
 import {
   getRecentProducts,
   getArticles,
 } from "./components/article/article.service.js";
-import { filterByCategory, productPages } from "./components/categories/categories.service.js";
+
 
 ///////////////////////////////////
 ///////// DOM Content   ///////////
 ///////////////////////////////////
 document.addEventListener("DOMContentLoaded", () => {
   // Create the components
-  const componentNames = ["main","header","footer","navigation","categories"];
+  const componentNames = [
+    "main",
+    "header",
+    "footer",
+    "navigation",
+    "categories",
+  ];
 
   componentNames.forEach((name) => {
     const component = components[name];
@@ -41,14 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const fourLastRecentProducts = getRecentProducts(jsonData);
   for (let i = 0; i < 4; i++) {
     const article = components.article;
-    createArticle(article, fourLastRecentProducts[i]);
+    createProductCard(article, fourLastRecentProducts[i]);
   }
 
   // Display the categories
   const jsonDataCategories = JSON.parse(localStorage.getItem("jsonCategories"));
   for (let category of jsonDataCategories) {
     createCategoryList(category);
-  } 
+  }
 
   // Event listeners for overlay
   const overlayElement = document.querySelector(".overlay");
@@ -61,10 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Event listener  when scrolling
   window.addEventListener("scroll", () => {
-    const elementTextSize =
-      document.querySelector(".main__txt").offsetHeight;
-    const elementImageSize =
-      document.querySelector(".main").offsetHeight;
+    const elementTextSize = document.querySelector(".main__txt").offsetHeight;
+    const elementImageSize = document.querySelector(".main").offsetHeight;
     if (window.scrollY > (elementImageSize - elementTextSize) / 2) {
       document.querySelector(".header").classList.add("bg-header");
     }
@@ -78,22 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
     listenHeaderLinks(event);
     listenOverlayLinks(event);
     listenFooterLinks(event, components, createComponent);
-
-    if (event.target.classList.contains("category__img")) {
-      const products = filterByCategory(jsonData, event.target.alt);
-      const pages = productPages(products);
-      console.log(pages);
-      document.getElementById("main-target").innerHTML = "";
-      createComponent(components.productcat);
-  };
-})
-
-function handleCategoryClick(event, components, createComponent, link) {
-  if (event.target && event.target === document.getElementById(link)) {
-    document.getElementById("main-target").innerHTML = "";
-    createComponent(components.text);
-    toggleOverlay(document.querySelector(".overlay"));
-  }
-}
-
+    listenCategoriesLinks(event, components, createComponent);
+  });
 });

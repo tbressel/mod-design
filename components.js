@@ -20,6 +20,7 @@ export const components = {
   footer: ["footer-template", "footer-target"],
   main: ["main-template", "main-target"],
   article: ["article-template", "product-target"],
+  productcardcat: ["article-template", "product-cat-target"],
   navigation: ["navigation-template", "navigation-target"],
   text: ["text-template", "main-target"],
   categories: ["categories-template","categories-target"],

@@ -70,3 +70,19 @@ export function productPages(products) {
   }
   return productPages;
 }
+
+
+/**
+ * 
+ * Function to get the products per category
+ * 
+ * @param {*} event 
+ * @returns 
+ */
+export function getProductPerCategory(event) {
+  const jsonData = JSON.parse(localStorage.getItem("jsonData"));
+  const products = filterByCategory(jsonData, event.target.alt);
+  const pages = productPages(products);
+
+  return pages;
+}
