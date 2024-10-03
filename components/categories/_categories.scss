@@ -88,4 +88,40 @@
         }
 
     }
+
+    .product-cat {
+
+        &__container {
+            max-width: 1400px;
+    margin: 0 auto 8rem;
+    padding: 5rem;
+        }
+
+        &__bg {
+            background-image: url('./images/canapes-banner-big.png');
+            background-position: center;
+            width: 400px;
+            height: 400px;
+        }
+    
+        &__banner {
+           
+            margin: -17rem 0 0 20rem;
+        }
+    
+        &__description {
+            padding: 1rem;
+            margin: 0 0 0 20rem;
+            background-color: var(--air-force-blue);
+            color: var(--white);
+
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            max-width: 1400px;
+            margin: auto;
+        }
+    }
 }
