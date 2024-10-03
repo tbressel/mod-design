@@ -12,20 +12,12 @@ import { createProductCard } from "./components/article/article.component.js";
 import { createCategoryList } from "./components/categories/categories.component.js";
 import { listenFooterLinks } from "./components/footer/footer.component.js";
 import { listenHeaderLinks } from "./components/header/header.component.js";
-import {
-  listenCategoriesLinks,
-  listenCarouselButtons,
-} from "./components/categories/categories.component.js";
-import {
-  listenOverlayLinks,
-  toggleOverlay,
-} from "./components/overlay/overlay.component.js";
+import { listenCategoriesLinks, listenCarouselButtons} from "./components/categories/categories.component.js";
+import { listenOverlayLinks, toggleOverlay } from "./components/overlay/overlay.component.js";
+import { loadingResultPage } from "./components/search/search.component.js";
 
 // Services
-import {
-  getRecentProducts,
-  getArticles,
-} from "./components/article/article.service.js";
+import { getRecentProducts, getArticles } from "./components/article/article.service.js";
 
 ///////////////////////////////////
 ///////// DOM Content   ///////////
@@ -92,19 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
     listenCategoriesLinks(event, components, createComponent);
     listenCarouselButtons(event);
 
-    if (event.target.classList.contains("js-find-btn")) {
-      loadingFinderPage();
-    }
-  });
+   
+      loadingResultPage(event);
+    });
+  
 
-  // Définir la fonction loadingFinderPage
-  function loadingFinderPage() {
-    const elementField = document.getElementById("find-field");
 
-    const value = elementField.value;
-    console.log(value);
-  }
 
-  // Ajouter un écouteur d'événement au document pour détecter les clics sur le bouton
-  document.addEventListener("click", function (event) {});
 });
