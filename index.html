@@ -86,29 +86,29 @@
   <main>
     <div class="blank-space"></div>
 
-    <section>
-      <h1 class="product-banner">Ici on va dire des choses très intéressantes</h1>
+    <section aria-labelledby="interesting">
+      <h2 id="interesting" class="product-banner">Ici on va dire des choses très intéressantes</h2>
     </section>
 
-    <section class="banner-article">
-      <h3 class="text__h3">Lorem ipsum dolor sit amet.</h3>
+    <section class="banner-article" aria-labelledby="lorem-ipsum-1">
+      <h3 id="lorem-ipsum-1" class="text__h3">Lorem ipsum dolor sit amet.</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, alias reiciendis fugit
         tempora nisi numquam a doloribus harum amet non, adipisci, assumenda cupiditate officiis eos molestias dolor
         culpa exercitationem. Alias.</p>
     </section>
-    <section class="banner-article">
-      <h3 class="text__h3">Lorem ipsum dolor sit amet.</h3>
+    <section class="banner-article" aria-labelledby="lorem-ipsum-2">
+      <h3  id="lorem-ipsum-2"  class="text__h3">Lorem ipsum dolor sit amet.</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, alias reiciendis fugit
         tempora nisi numquam a doloribus harum amet non, adipisci, assumenda cupiditate officiis eos molestias dolor
         culpa exercitationem. Alias.</p>
     </section>
 
-    <section>
-      <h1 class="product-banner">D'autres moins</h1>
+    <section aria-labelledby="not-interesting">
+      <h2 id="not-interesting" class="product-banner">D'autres moins</h2>
     </section>
 
-    <section class="banner-article">
-      <h3 class="text__h3">Lorem ipsum dolor sit amet.</h3>
+    <section class="banner-article" aria-labelledby="lorem-ipsum-3">
+      <h3 id="lorem-ipsum-3" class="text__h3">Lorem ipsum dolor sit amet.</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, alias reiciendis fugit
         tempora nisi numquam a doloribus harum amet non, adipisci, assumenda cupiditate officiis eos molestias dolor
         culpa exercitationem. Alias.</p>
@@ -265,6 +265,7 @@
     <div class="find">
       <div class="find__icon"></div>
       <form action="" class="find__form">
+        <label for="find-field"></label>
         <input id="find-field" class="find__field" type="text" placeholder="Chercher ...">
       </form>
       <button type="button" class="find__btn bg-air-force-blue white js-find-btn">&gt;</button>

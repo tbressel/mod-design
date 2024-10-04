@@ -33,12 +33,21 @@ export default defineConfig({
     ]
   },
   server: {
-    host: '192.168.1.79', 
+    host: '192.168.4.61', 
     port: 5173, 
     open: true,
     https: {
       key: fs.readFileSync('./server.key'),
       cert: fs.readFileSync('./server.crt'),
     },
-  }
+  },
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+      },
+    },
+    cssCodeSplit: true, 
+  },
 });
