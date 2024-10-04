@@ -11,6 +11,7 @@
 
 <body class="body">
   <div id="app">
+    <!-- Injection Hooks -->
     <div id="navigation-target" class="navigation"></div>
     <div id="header-target"></div>
     <main id="main-target" class="main-target"></main>
@@ -23,7 +24,7 @@
 
 <!-- HEADER -->
 <template id="navigation-template">
-  <header class="header" role="head banner">
+  <header class="header">
     <div class="header__top">
 
       <p class="header__ttl">Mob<span class="air-force-blue">D</span><span>esign</p>
@@ -264,7 +265,7 @@
  <template id="find-template">
     <div class="find">
       <div class="find__icon"></div>
-      <form action="" class="find__form">
+      <form role ="search" action="" class="find__form">
         <label for="find-field"></label>
         <input id="find-field" class="find__field" type="text" placeholder="Chercher ...">
       </form>

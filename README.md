@@ -15,3 +15,10 @@ pnpm install the-new-css-reset
 ## Installation of Crypto-js library
 pnpm install crypto-js
 
+## Installation de HTTP2
+sudo apt-get install mkcert
+mkcert install
+mkcert -key-file server.key -cert-file server.crt <n° IP>
+
+## Installation d'outil pour le build
+pnpm install vite-plugin-static-copy

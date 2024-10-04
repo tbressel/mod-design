@@ -13,7 +13,6 @@
     "@vue/test-utils": "^2.4.6",
     "sass": "^1.79.4",
     "terser": "^5.34.1",
-    "uglifycss": "^0.0.29",
     "vite": "^5.4.1",
     "vitest": "^2.1.1"
   },

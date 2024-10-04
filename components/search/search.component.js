@@ -68,6 +68,8 @@ function searchDataIntoProducts(value) {
       .replaceAll(/[><&{}\[\]@%$]/g, "");
     // console.log("Je recherche parmis tous ces textes : ",filterCategory);
 
+    
+
     return (
       product.description.toLowerCase().includes(value) ||
       product.title.toLowerCase().includes(value) ||
