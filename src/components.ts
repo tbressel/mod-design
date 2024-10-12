@@ -1,3 +1,5 @@
+import { ComponentsId } from "./components.model";
+
 
 /**
  * Function to get a template and inject it into the DOM
@@ -15,7 +17,7 @@ export function createComponent(component) {
 /**
  * Object with the components to be injected into the DOM
  */
-export const components = {
+export const components: ComponentsId = {
   header: ["header-template", "header-target"],
   footer: ["footer-template", "footer-target"],
   main: ["main-template", "main-target"],

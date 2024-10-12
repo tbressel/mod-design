@@ -10,8 +10,10 @@
     "test:unit": "vitest"
   },
   "devDependencies": {
+    "@types/node": "^22.7.5",
     "@vue/test-utils": "^2.4.6",
     "sass": "^1.79.4",
+    "typescript": "^5.6.3",
     "terser": "^5.34.1",
     "vite": "^5.4.1",
     "vitest": "^2.1.1"

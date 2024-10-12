@@ -13,6 +13,3 @@ RUN apk add npm
 RUN npm install -g pnpm
 RUN pnpm install
 
-# Execution de l'application
-CMD ["pnpm", "run", "dev"]
-

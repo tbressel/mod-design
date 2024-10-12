@@ -12,6 +12,11 @@ import fs from 'fs';
 
 
 export default defineConfig({
+  root: "./src",
+  build: {
+    outDir: "../dist",
+    emptyOutDir: true,
+  },
   plugins: [
     viteStaticCopy({
       targets: [
