@@ -3,6 +3,11 @@ import { viteStaticCopy } from 'vite-plugin-static-copy';
 import { resolve } from 'path';
 
 export default defineConfig({
+  root: "./src",
+  build: {
+    outDir: "../dist",
+    emptyOutDir: true,
+  },
   plugins: [
     viteStaticCopy({
       targets: [
