@@ -15,3 +15,5 @@ pnpm install the-new-css-reset
 ## Installation of Crypto-js library
 pnpm install crypto-js
 
+## Installation de typescript
+pnpm add -D typescript @types/node
