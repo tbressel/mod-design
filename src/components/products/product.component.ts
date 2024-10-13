@@ -1,5 +1,5 @@
 import { Component } from "../../components.model";
-import { Product } from "../../products.model";
+import { Product } from "./products.model";
 
 /**
  * Function to get a template and inject it into the DOM article

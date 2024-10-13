@@ -1,20 +1,31 @@
 import { getProductPerCategory } from "./categories.service.js";
 import { createProductCard } from "../products/product.component.js";
+
+import { Category } from "./categories.model";
+
+
 /**
  * Function to get a template and inject it into the DOM article
  *
- * @param {*} component
+ * @param {Category} category - The category Json object
  */
-export function createCategoryList(category) {
-  const template = document
-    .getElementById("category-template")
-    .content.cloneNode(true);
+export function createCategoryList(category: Category): void {
+  const template = (document.getElementById("category-template") as HTMLTemplateElement).content.cloneNode(true) as DocumentFragment;
   const goalElement = document.getElementById("category-target");
-  template.querySelector(".category__card").setAttribute("id", category.id);
-  template.querySelector(".category__card img").src = category.categoryImg;
-  template.querySelector(".category__card img").alt = category.category;
-  template.querySelector(".category__ttl").textContent = category.category;
-  goalElement.appendChild(template);
+
+  if (goalElement) {
+    const cardElement = template.querySelector(".category__card") as HTMLElement;
+    const imgElement = template.querySelector(".category__card img") as HTMLImageElement;
+    const titleElement = template.querySelector(".category__ttl") as HTMLElement;
+
+    if (cardElement && imgElement && titleElement) {
+      cardElement.setAttribute("id", category.id.toString());
+      imgElement.src = category.categoryImg;
+      imgElement.alt = category.category;
+      titleElement.textContent = category.category;
+      goalElement.appendChild(template);
+    }
+  }
 }
 
 /**

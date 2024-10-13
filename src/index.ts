@@ -21,8 +21,8 @@ import {getRecentProducts, getAllProducts} from "./components/products/product.s
 
 // Models
 import { Component } from "./components.model";
-import { Products } from "./products.model";
-import { Categories } from "./categories.model";
+import { Products } from "./components/products/products.model";
+import { Categories } from "./components/categories/categories.model";
 
 
 

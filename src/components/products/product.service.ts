@@ -1,6 +1,6 @@
 import CryptoJS from "crypto-js";
 import { getCategories, createCategoriesJsonData } from "../categories/categories.service";
-import { Products, Product } from "../../products.model";
+import { Products, Product } from "./products.model";
 
 
 export async function getAllProducts() {

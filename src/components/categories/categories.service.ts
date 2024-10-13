@@ -1,5 +1,5 @@
-import  {Products, Product} from '../../products.model'
-import {Categories} from '../../categories.model'
+import  {Products, Product} from '../products/products.model'
+import {Categories} from './categories.model'
 /**
  * 
  * Function to get all categories
