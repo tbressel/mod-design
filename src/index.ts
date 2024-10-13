@@ -8,7 +8,7 @@ import "./index.scss";
 
 // Components
 import { createComponent, components } from "./components";
-import { createProductCard } from "./components/article/article.component";
+import { createProductCard } from "./components/products/product.component";
 import { createCategoryList } from "./components/categories/categories.component";
 import { listenFooterLinks } from "./components/footer/footer.component";
 import { listenHeaderLinks } from "./components/header/header.component";
@@ -17,11 +17,11 @@ import {listenOverlayLinks,toggleOverlay} from "./components/overlay/overlay.com
 import { loadingResultPage } from "./components/search/search.component";
 
 // Services
-import {getRecentProducts, getArticles} from "./components/article/article.service";
+import {getRecentProducts, getAllProducts} from "./components/products/product.service";
 
 // Models
 import { Component } from "./components.model";
-import { Products } from "./products.model.ts";
+import { Products } from "./products.model";
 import { Categories } from "./categories.model";
 
 
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Get full datas
-  getArticles();
+  getAllProducts();
 
   // Display the 4 most recent products
   const jsonDataString: string | null = localStorage.getItem("jsonData");

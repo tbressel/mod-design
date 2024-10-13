@@ -1,6 +1,6 @@
 import { createComponent, components } from "../../components.js";
 import { toggleOverlay } from "../overlay/overlay.component.js";
-import { createProductCard } from "../article/article.component.js";
+import { createProductCard } from "../products/product.component.js";
 
 /**
  *

@@ -3,7 +3,7 @@ import { getCategories, createCategoriesJsonData } from "../categories/categorie
 import { Products, Product } from "../../products.model";
 
 
-export async function getArticles() {
+export async function getAllProducts() {
   try {
     const response: Response = await fetch("./datas/products.json");
     if (!response.ok) {
@@ -14,7 +14,7 @@ export async function getArticles() {
     // check if data has changed then update the local storage or not
     isDataChanged(jsonData);
 
-  
+
     const categories = getCategories(jsonData);
     const jsonCategories = createCategoriesJsonData(categories);
   } catch (error) {
@@ -44,7 +44,7 @@ function generateMD5(jsonData: Products): string {
  *
  * Function to update the local storage if the data has changed
  *
- * @param {*} jsonData
+ * @param {Products} jsonData with all the products
  */
 function isDataChanged(jsonData: Products) {
   const newHash = generateMD5(jsonData);
@@ -65,11 +65,11 @@ function isDataChanged(jsonData: Products) {
  *
  * Function to get the 4 most recent objects
  *
- * @param {*} data
- * @returns
+ * @param {Products} data contains all products
+ * @returns Products with the 4 most recent products
  */
-export function getRecentProducts(data: Products) {
-  const sortedData = data.sort((a,b) => getTimestampFromDate(b) - getTimestampFromDate(a))
+export function getRecentProducts(data: Products): Products {
+  const sortedData = data.sort((a: Product,b: Product) => getTimestampFromDate(b) - getTimestampFromDate(a))
   const selectData = sortedData.slice(0,4);
   return selectData
 }
@@ -79,9 +79,9 @@ export function getRecentProducts(data: Products) {
  * 
  * Function to convert text date into a timestamp value
  * 
- * @param {*} data 
- * @returns 
+ * @param {Product} product 
+ * @returns number
  */
-function getTimestampFromDate(data: Products): number {
-  return new Date(data.dateAdded).getTime()
+function getTimestampFromDate(product: Product): number {
+  return new Date(product.dateAdded).getTime()
 }

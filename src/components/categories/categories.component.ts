@@ -1,5 +1,5 @@
 import { getProductPerCategory } from "./categories.service.js";
-import { createProductCard } from "../article/article.component.js";
+import { createProductCard } from "../products/product.component.js";
 /**
  * Function to get a template and inject it into the DOM article
  *
