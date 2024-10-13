@@ -1,17 +1,17 @@
-
-
+import  {Products, Product} from '../../products.model'
+import {Categories} from '../../categories.model'
 /**
  * 
  * Function to get all categories
  * 
- * @param {*} data 
- * @returns 
+ * @param {Products} data with all the products 
+ * @returns string[] with all the categories
  */
-export function getCategories(data) {
+export function getCategories(data: Products): string[] {
     // Get all categories
-    const categories = data.map((article) => article.category);
+    const categories: string[] = data.map((article: Product) => article.category);
     // Get unique categories
-    const uniqueCategories = [...new Set(categories)];
+    const uniqueCategories: string [] = [...new Set(categories)];
     return uniqueCategories;
 
 }
@@ -22,17 +22,17 @@ export function getCategories(data) {
  * 
  * Function to create a JSON object with categories
  * 
- * @param {*} data 
- * @returns 
+ * @param {Products} products with all the products 
+ * @returns a new JSON object with all the categories and details
  */
-export function createCategoriesJsonData(data) {
-  const jsonCategories = [];
+export function createCategoriesJsonData(categories: string[]): Categories {
+  const jsonCategories: Categories = [];
   let idCategory = 1;
-  data.forEach((category) => {
+  categories.forEach((categoryName: string) => {
     jsonCategories.push({
       id: idCategory,
-      category: category,
-      categoryImg: `/images/${category.toLowerCase().replaceAll("é", "e").split(' ').join('-')}.webp`
+      category: categoryName,
+      categoryImg: `/images/${categoryName.toLowerCase().replaceAll("é", "e").split(' ').join('-')}.webp`
     });
     idCategory++;
   });

@@ -1,23 +1,27 @@
 import CryptoJS from "crypto-js";
 import { getCategories, createCategoriesJsonData } from "../categories/categories.service";
+import { Products, Product } from "../../products.model";
+
 
 export async function getArticles() {
-  return fetch("./datas/products.json")
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Erreur HTTP! : ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((jsonData) => {
-      // check if data has changed then update the local storage or not
-      isDataChanged(jsonData);
-      const categories = getCategories(jsonData);
-      const jsonCategories = createCategoriesJsonData(categories);
-    })
-    .catch((error) => {
-      console.error("Oupsss, y'a une couille dans l'pâté! : ", error);
-    });
+  try {
+    const response: Response = await fetch("./datas/products.json");
+    if (!response.ok) {
+      throw new Error(`Erreur HTTP! : ${response.status}`);
+    }
+    const jsonData: Products = await response.json();
+    
+    // check if data has changed then update the local storage or not
+    isDataChanged(jsonData);
+
+    
+    const categories = getCategories(jsonData);
+    const jsonCategories = createCategoriesJsonData(categories);
+  } catch (error) {
+    console.error("Oupsss, y'a une couille dans l'pâté! : ", error);
+  } finally {
+    console.log("Fetch attempt finished.");
+  }
 }
 
 
@@ -26,10 +30,10 @@ export async function getArticles() {
  *
  * Function to generate a MD5 hash from a JSON object
  *
- * @param {*} jsonData
- * @returns
+ * @param {Products} jsonData
+ * @returns {string} hash encrypted with CryptoJS
  */
-function generateMD5(jsonData) {
+function generateMD5(jsonData: Products): string {
   const hash = CryptoJS.MD5(JSON.stringify(jsonData));
   return hash.toString(CryptoJS.enc.Hex);
 }
@@ -42,7 +46,7 @@ function generateMD5(jsonData) {
  *
  * @param {*} jsonData
  */
-function isDataChanged(jsonData) {
+function isDataChanged(jsonData: Products) {
   const newHash = generateMD5(jsonData);
   const storedHash = localStorage.getItem("jsonDataHash");
 
@@ -64,7 +68,7 @@ function isDataChanged(jsonData) {
  * @param {*} data
  * @returns
  */
-export function getRecentProducts(data) {
+export function getRecentProducts(data: Products) {
   const sortedData = data.sort((a,b) => getTimestampFromDate(b) - getTimestampFromDate(a))
   const selectData = sortedData.slice(0,4);
   return selectData
@@ -78,6 +82,6 @@ export function getRecentProducts(data) {
  * @param {*} data 
  * @returns 
  */
-function getTimestampFromDate(data) {
+function getTimestampFromDate(data: Products): number {
   return new Date(data.dateAdded).getTime()
 }

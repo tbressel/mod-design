@@ -20,7 +20,9 @@ import { loadingResultPage } from "./components/search/search.component";
 import {getRecentProducts, getArticles} from "./components/article/article.service";
 
 // Models
-import { Component, Products, Category, Categories } from "./components.model";
+import { Component } from "./components.model";
+import { Products } from "./products.model.ts";
+import { Categories } from "./categories.model";
 
 
 

@@ -10,7 +10,7 @@ pnpm install sass --save-dev
 ## Installation of a style browser reseter
 pnpm install the-new-css-reset
 ## Installation of Crypto-js library
-pnpm install crypto-js
+pnpm install crypto-js && pnpm install @types/crypto-js --save-dev
 ## Installation de typescript
 pnpm add -D typescript @types/node
 
