@@ -40,3 +40,23 @@ export interface Category {
  * The whole json file is an array of categories
  */
 export type Categories = Category[];
+
+/**
+ * ComponentsId lists all the components that can be injected into the DOM
+ */
+export interface ComponentsId {
+header: Component;
+footer: Component;
+main: Component;
+article: Component;
+productcardcat: Component;
+navigation: Component;
+text: Component;
+categories: Component;
+category: Component;
+productcat: Component;
+pagination: Component;
+find: Component;
+results: Component;
+resultcard: Component;
+}

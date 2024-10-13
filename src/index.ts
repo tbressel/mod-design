@@ -12,24 +12,17 @@ import { createProductCard } from "./components/article/article.component";
 import { createCategoryList } from "./components/categories/categories.component";
 import { listenFooterLinks } from "./components/footer/footer.component";
 import { listenHeaderLinks } from "./components/header/header.component";
-import {
-  listenCategoriesLinks,
-  listenCarouselButtons,
-} from "./components/categories/categories.component";
-import {
-  listenOverlayLinks,
-  toggleOverlay,
-} from "./components/overlay/overlay.component";
+import { listenCategoriesLinks, listenCarouselButtons} from "./components/categories/categories.component";
+import {listenOverlayLinks,toggleOverlay} from "./components/overlay/overlay.component";
 import { loadingResultPage } from "./components/search/search.component";
 
 // Services
-import {
-  getRecentProducts,
-  getArticles,
-} from "./components/article/article.service";
+import {getRecentProducts, getArticles} from "./components/article/article.service";
 
 // Models
 import { Component, Products, Category, Categories } from "./components.model";
+
+
 
 ///////////////////////////////////
 ///////// DOM Content   ///////////

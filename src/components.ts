@@ -1,15 +1,17 @@
-import { ComponentsId } from "./components.model";
+import { ComponentsId, Component } from "./components.model";
 
 
 /**
  * Function to get a template and inject it into the DOM
  *
- * @param {*} component
+ * @param {[Component]} component : the component to inject into the DOM with the source and the destination
  */
-export function createComponent(component) {
-  const template = document.getElementById(component[0]).content.cloneNode(true);
-  const goalElement = document.getElementById(component[1]);
-  goalElement.appendChild(template);
+export function createComponent(component: Component): void { 
+  const template: Node = (document.getElementById(component[0]) as HTMLTemplateElement).content.cloneNode(true);
+  const goalElement: HTMLElement | null = document.getElementById(component[1]);
+  if (goalElement) {
+    goalElement.appendChild(template);
+  }
 }
 
 
