@@ -14,7 +14,7 @@ export async function getArticles() {
     // check if data has changed then update the local storage or not
     isDataChanged(jsonData);
 
-    
+  
     const categories = getCategories(jsonData);
     const jsonCategories = createCategoriesJsonData(categories);
   } catch (error) {
