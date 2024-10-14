@@ -99,13 +99,24 @@ window.addEventListener("scroll", () => {
 });
 
   // Event listener when click
-  document.addEventListener("click", function (event) {
+  document.addEventListener("click", function (event: Event) {
+
+    // Event listeners for links available on the header bar like the menu burger
     listenHeaderLinks(event);
+
+    // Event listeners for links available on the overlay
     listenOverlayLinks(event);
+
+    // Event listeners for links available on the footer
     listenFooterLinks(event, components, createComponent);
+
+    // Event listeners for links available on the categories
     listenCategoriesLinks(event, components, createComponent);
+
+    // Event listeners for the carousel buttons
     listenCarouselButtons(event);
 
+    // Event listeners for the validation of the search bar
     loadingResultPage(event);
   });
 });

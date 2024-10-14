@@ -2,7 +2,7 @@ import  {Products, Product} from '../products/products.model'
 import {Categories} from './categories.model'
 /**
  * 
- * Function to get all categories
+ * Function to get all categories from the whole products
  * 
  * @param {Products} data with all the products 
  * @returns string[] with all the categories
