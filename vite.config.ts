@@ -12,6 +12,7 @@ import fs from 'fs';
 
 
 export default defineConfig({
+  base: "/sites/mobdesign/",
   root: "./src",
   build: {
     outDir: "../dist",
