@@ -29,3 +29,25 @@ jobs:
         run: |
             docker tag mob-design ${{ secrets.DOCKER_USERNAME }}/mob-design:latest
             docker push ${{ secrets.DOCKER_USERNAME }}/mob-design:latest
+
+  ftp-deploy:
+    needs: build-login-push  
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Upload files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # Local folder to deploy
+          local-dir: ./dist/
+          # Remote folder on the FTP server
+          server-dir: /sites/mob-design/
+          # Delete all files in the remote folder before uploading
+          dangerous-clean-slate: true  
+      
