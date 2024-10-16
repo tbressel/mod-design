@@ -60,7 +60,7 @@ jobs:
           # Local folder to deploy
           local-dir: ./dist/
           # Remote folder on the FTP server
-          server-dir: /sites/mobdesign/
+          server-dir: public_html//sites/mobdesign/
           # Delete all files in the remote folder before uploading
           dangerous-clean-slate: true  
       
