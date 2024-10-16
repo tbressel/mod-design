@@ -58,7 +58,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           # Local folder to deploy
-          local-dir: ../../dist/
+          local-dir: ./dist/
           # Remote folder on the FTP server
           server-dir: /sites/mob-design/
           # Delete all files in the remote folder before uploading
